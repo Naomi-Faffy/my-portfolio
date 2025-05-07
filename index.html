@@ -8,29 +8,61 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to My Portfolio</h1>
+        <div class="logo">Tafara Designer</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#projects">Portfolio</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    
-    <section id="about">
-        <h2>About Tafara</h2>
-        <p>Here you can write a brief introduction about yourself and your journey.</p>
+
+    <section class="hero">
+        <img src="profile.jpg" alt="Tafara Profile" class="profile-pic">
+        <div class="intro">
+            <h1>Tafara Chitiyo</h1>
+            <h2>Graphics Designer</h2>
+            <p><strong>Expertise:</strong> Adobe Illustrator, Photoshop</p>
+            <p><strong>Hobbies:</strong> Drawing, Traveling, Photography</p>
+        </div>
     </section>
 
-    <section id="projects">
+    <section class="about" id="about">
+        <h2>About Me</h2>
+        <p>I am a freelance graphic designer and photographer based in Harare, Zimbabwe. I have a BSc in Computer Science and a deep love for visual storytelling. With over 5 years of experience in creative design, I specialize in blending art with strategy.</p>
+    </section>
+
+    <section class="quote">
+        <div class="quote-text">
+            "Design is the application of intent – the opposite of chance, or randomness."
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
         <h2>Projects</h2>
         <p>Showcase your projects here, such as descriptions and links to live demos or repositories.</p>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>You can include your email, phone number, or social media links for others to reach you.</p>
-    </section>
-
-    <section id="resume">
+    <section class="resume" id="resume">
         <h2>Resume</h2>
         <p><a href="resume.pdf" target="_blank">Click here to download my resume</a></p>
     </section>
-    
-    <script src="scrip.js"></script>
+
+    <section class="contact-form" id="contact">
+        <h2>Get your free design quotes</h2>
+        <form>
+            <input type="text" id="brand" placeholder="Name of your brand">
+            <input type="email" id="email" placeholder="Email">
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Copyright © 2025 Tafara Designer</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
