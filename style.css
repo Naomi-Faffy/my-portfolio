@@ -1,176 +1,80 @@
-/* Global styles */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #141010; /* fourth-color */
-    color: #fff;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-}
-
-a {
+/*--------------------------------------------------------------
+# Font & Color Variables
+--------------------------------------------------------------*/
+:root {
+    /* Fonts */
+    --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --heading-font: "Raleway", sans-serif;
+    --nav-font: "Poppins", sans-serif;
+  
+    /* Global Colors */
+    --background-color: #000000;
+    --default-color: #fafafa;
+    --heading-color: #ffffff;
+    --accent-color: #18d26e;
+    --surface-color: #1a1a1a;
+    --contrast-color: #000000;
+  
+    /* Nav Menu Colors */
+    --nav-color: #fafafa;
+    --nav-hover-color: #18d26e;
+    --nav-mobile-background-color: #1a1a1a;
+    --nav-dropdown-background-color: #1a1a1a;
+    --nav-dropdown-color: #fafafa;
+    --nav-dropdown-hover-color: #18d26e;
+  
+    /* Scroll Behavior */
+    scroll-behavior: smooth;
+  }
+  
+  /*--------------------------------------------------------------
+  # General Styling
+  --------------------------------------------------------------*/
+  body {
+    color: var(--default-color);
+    background-color: var(--background-color);
+    font-family: var(--default-font);
+  }
+  
+  a {
+    color: var(--accent-color);
     text-decoration: none;
-    color: inherit;
-}
-
-/* Header */
-header {
-    background-color: #f70776; /* first-color */
-    color: white;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav ul li a {
-    color: white;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Hero Section */
-.hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 3rem 1rem;
-    background-color: #fff;
-    color: #000;
-    text-align: center;
-}
-
-.hero .profile-pic {
-    width: 180px;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    margin-bottom: 1.5rem;
-}
-
-/* About Section */
-.about {
-    background-color: #c3195d; /* second-color */
-    padding: 3rem 2rem;
-    text-align: center;
-}
-
-.about h2 {
-    color: #fff;
-    margin-bottom: 1rem;
-}
-
-/* Quote Section */
-.quote {
-    position: relative;
-    background: url('https://img.freepik.com/free-vector/gradient-particle-wave-background_23-2150521668.jpg?semt=ais_hybrid&w=740') center/cover no-repeat;
-    color: #fff;
-    padding: 5rem 2rem;
-    text-align: center;
-}
-
-.quote::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-.quote-text {
-    position: relative;
-    font-size: 1.8rem;
-    font-style: italic;
-    z-index: 1;
-}
-
-/* Projects Section */
-.projects {
-    background-color: #680747; /* third-color */
-    padding: 3rem 2rem;
-    text-align: center;
-}
-
-.projects h2 {
-    color: #fff;
-}
-
-/* Resume Section */
-.resume {
-    background-color: #f70776; /* first-color */
-    padding: 3rem 2rem;
-    text-align: center;
-    color: white;
-}
-
-.resume a {
-    color: #000000;
-    font-weight: bold;
-}
-
-/* Contact Form Section */
-.contact-form {
-    background-color: #c3195d; /* second-color */
-    color: #fff;
-    padding: 3rem 2rem;
-    text-align: center;
-}
-
-.contact-form h2 {
-    margin-bottom: 2rem;
-}
-
-.contact-form form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-.contact-form input,
-.contact-form button {
-    padding: 0.8rem;
-    width: 100%;
-    font-size: 1rem;
-}
-
-.contact-form input {
-    border: 1px solid #000000;
-    border-radius: 4px;
-}
-
-.contact-form button {
-    background-color: #f70776; /* first-color */
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-.contact-form button:hover {
-    background-color: #c3195d; /* second-color */
-}
-
-/* Footer */
-footer {
-    background-color: #141010; /* fourth-color */
-    padding: 1rem;
-    text-align: center;
-    color: #f70776; /* first-color */
-}
+    transition: color 0.3s;
+  }
+  
+  a:hover {
+    color: color-mix(in srgb, var(--accent-color), transparent 25%);
+    text-decoration: none;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color);
+    font-family: var(--heading-font);
+  }
+  
+  /*--------------------------------------------------------------
+  # Footer Fix
+  --------------------------------------------------------------*/
+  .footer p {
+    font-size: 15px; /* FIXED: Added missing unit */
+  }
+  
+  /*--------------------------------------------------------------
+  # Improvements (Optional for readability & maintainability)
+  --------------------------------------------------------------*/
+  /* Consider grouping colors in light/dark themes only when needed */
+  .light-background {
+    --background-color: #1a1a1a;
+    --surface-color: #343434;
+  }
+  
+  .dark-background {
+    --background-color: rgba(15, 15, 15, 0.975);
+    --default-color: #ffffff;
+    --heading-color: #ffffff;
+    --surface-color: #292929f9;
+    --contrast-color: #000000;
+  }
+  
+  /* Removed repeated :root blocks */
+  
