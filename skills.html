@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Skills</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
-  <!-- Include the same nav here -->
-  <section class="section-content">
+  <nav>
+    <div class="logo">Tafara <span>Chitiyo</span></div>
+    <div class="nav-container">
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="skills.html">Skills</a>
+        <a href="introduction.html">Introduction</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+  <section class="section-content" data-aos="fade-up" data-aos-duration="1500">
     <h1>My Skills</h1>
     <ul>
       <li>HTML5, CSS3, JavaScript</li>
@@ -15,5 +30,8 @@
       <li>Git & GitLab</li>
     </ul>
   </section>
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>AOS.init({offset: 0});</script>
 </body>
 </html>
