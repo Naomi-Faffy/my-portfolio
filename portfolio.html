@@ -21,19 +21,30 @@
       </div>
     </div>
   </nav>
-  <section class="section-content" data-aos="zoom-in" data-aos-duration="1500">
-    <h1>My Projects</h1>
-    <div class="portfolio-grid">
-      <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-        <h3>Income/Expense Manager</h3>
-        <p>A full-stack Laravel app to track finances.</p>
-        <a href="https://github.com/yourusername/project1" target="_blank">GitHub Repo</a>
+
+  <section class="main-container">
+    <div class="content" data-aos="fade-up" data-aos-duration="1500">
+      <h1>Featured Projects</h1>
+      <div class="portfolio-grid">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+          <h3>Income & Expense Manager</h3>
+          <p>A Laravel-based full-stack app that tracks income, expenses, and commissions. Built with role-based access and reporting features.</p>
+          <a href="https://github.com/yourusername/income-expense-manager" target="_blank">GitHub Repo</a>
+        </div>
+        <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+          <h3>CardioRisk Classifier</h3>
+          <p>A machine learning model using the UCI Heart Disease dataset to predict cardiovascular risk based on clinical attributes.</p>
+          <a href="https://github.com/yourusername/cardiorisk-classifier" target="_blank">GitHub Repo</a>
+        </div>
       </div>
-      <!-- Add more project-cards as needed -->
+    </div>
+    <div class="image" data-aos="zoom-in" data-aos-duration="1500">
+      <img src="naomi.jpg" alt="Project Snapshot">
     </div>
   </section>
+
   <script src="script.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>AOS.init({offset: 0});</script>
+  <script>AOS.init({ offset: 0 });</script>
 </body>
 </html>
