@@ -8,7 +8,7 @@
 body{
     width: 100%;
     height: 100vh;
-    background-color: black;
+    background-color: #c0855b;
     overflow: hidden;
 }
 
@@ -27,7 +27,7 @@ nav{
 }
 
 .logo{
-    color: white;
+    color: black;
     position: absolute;
     top: 18px;
     left: 15px;
@@ -36,8 +36,8 @@ nav{
 }
 
 .logo span{
-    color: #1399a7;
-    text-shadow: 0 0 10px #1399a7;
+    color: #50352a;
+    text-shadow: 0 0 10px #50352a;
 }
 
 .hamburg,
@@ -61,8 +61,8 @@ nav{
 }
 
 .nav-container .links a:hover{
-    color: #1399a7;
-    border-bottom: 2px solid #1399a7;
+    color: #50352a;
+    border-bottom: 2px solid #50352a;
 }
 
 .dropdown{
@@ -93,7 +93,7 @@ nav{
 }
 
 .dropdown .links a:hover{
-    background-color: #1399a7;
+    background-color: #50352a;
 }
 
 section{
@@ -108,7 +108,7 @@ height: 90vh;
 }
 
 .section-content h1 {
-    color: #1399a7;
+    color: #50352a;
     font-size: 2rem;
     margin-bottom: 20px;
 }
@@ -127,7 +127,7 @@ height: 90vh;
 .project-card {
     background-color: #222;
     padding: 20px;
-    border: 1px solid #1399a7;
+    border: 1px solid #50352a;
     border-radius: 10px;
 }
 
@@ -140,7 +140,7 @@ height: 90vh;
 }
 
 .main-container .content{
-    color: white;
+    color: black;
     width: 40%;
     min-height: 100px;
     box-shadow: 0 0 120px 50px black;
@@ -152,8 +152,8 @@ height: 90vh;
 
 .content h1 span{
     font-weight: 700;
-    text-shadow: 0 0 10px #1399a7;
-    color: #1399a7;
+    text-shadow: 0 0 10px #50352a;
+    color: #50352a;
 }
 
 .content .typewriter{
@@ -163,8 +163,8 @@ height: 90vh;
 }
 
 .typewriter span{
-    color: #1399a7;
-    text-shadow: 0 0  10px #1399a7;
+    color: #50352a;
+    text-shadow: 0 0  10px #50352a;
 }
 
 .content p{
@@ -173,14 +173,14 @@ height: 90vh;
 }
 
 .social-links i{
-    color: #1399a7;
+    color: #50352a;
     margin: 0 15px;
     font-size: 1.8rem;
     transition: 0.3s linear;
 }
 
 .social-links i:hover{
-    filter: drop-shadow(0 0 10px #1399a7);
+    filter: drop-shadow(0 0 10px #50352a);
     scale: 1.3;
 }
 
@@ -188,8 +188,8 @@ height: 90vh;
     width: 50%;
     height: 6vh;
     margin: 30px;
-    background-color: #1399a7;
-    color: white;
+    background-color: #50352a;
+    color: black;
     border: none;
     outline: none;
     font-size: 120%;
@@ -200,10 +200,10 @@ height: 90vh;
 
 .content button:hover{
     scale: 1.1;
-    border: 2px solid #1399a7;
+    border: 2px solid #50352a;
     background-color: transparent;
     font-weight: 700;
-    box-shadow: 0 0 40px 5px #1399a7;
+    box-shadow: 0 0 40px 5px #50352a;
 }
 
 .main-container .image{
@@ -211,7 +211,7 @@ height: 90vh;
     height: 80vh;
     border-radius: 100%;
     overflow: hidden;
-    box-shadow: 0 0 50px #1399a7;
+    box-shadow: 0 0 50px #50352a;
     z-index: -1;
 }
 
