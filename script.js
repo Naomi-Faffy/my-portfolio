@@ -1,13 +1,31 @@
-
-// Light/Dark mode toggle
+// Light/Dark mode toggle with localStorage persistence
 const modeToggleBtn = document.getElementById('mode-toggle');
-modeToggleBtn.addEventListener('click', () => {
-  document.body.classList.toggle('dark');
-  if (document.body.classList.contains('dark')) {
-    modeToggleBtn.textContent = '☀️';
+
+function setMode(dark) {
+  if (dark) {
+    document.body.classList.add('dark');
+    modeToggleBtn.textContent = '☀️'; // Sun icon
+    localStorage.setItem('darkMode', 'enabled');
   } else {
-    modeToggleBtn.textContent = '🌙';
+    document.body.classList.remove('dark');
+    modeToggleBtn.textContent = '🌙'; // Moon icon
+    localStorage.setItem('darkMode', 'disabled');
   }
+}
+
+// Initialize mode on page load
+window.addEventListener('DOMContentLoaded', () => {
+  const savedMode = localStorage.getItem('darkMode');
+  if (savedMode === 'enabled') {
+    setMode(true);
+  } else {
+    setMode(false);
+  }
+});
+
+modeToggleBtn.addEventListener('click', () => {
+  const isDark = document.body.classList.contains('dark');
+  setMode(!isDark);
 });
 
 // Typewriter effect for intro text
