@@ -427,46 +427,128 @@ body.dark .filter-btn:hover {
 
 body.dark .testimonials .testimonial {
   background: #2b2542;
-  box-shadow: 0 0 20px #5f3f6f;
-  color: #d8b9d3;
+  box-shadow: 0 0 20px #5f3
+f6f;
+color: #d8b9d3;
 }
 
 body.dark .testimonials .author {
-  color: #db9cc2;
+color: #db9cc2;
 }
 
 body.dark .contact-form label {
-  color: #d8b9d3;
+color: #d8b9d3;
 }
 
 body.dark .contact-form input,
 body.dark .contact-form textarea {
-  background-color: #1e1e2f;
-  border-color: #db9cc2;
-  color: #d8b9d3;
+background-color: #3b3251;
+border-color: #db9cc2;
+color: #d8b9d3;
 }
 
 body.dark .contact-form input:focus,
 body.dark .contact-form textarea:focus {
-  border-color: #db9cc2;
-  box-shadow: 0 0 8px #db9cc2;
+border-color: #db9cc2;
+box-shadow: 0 0 8px #db9cc2;
 }
 
 body.dark .contact-form button {
-  background-color: #db9cc2;
-  color: #1e1e2f;
+background-color: #db9cc2;
+color: #1e1e2f;
 }
 
 body.dark .contact-form button:hover,
 body.dark .contact-form button:focus {
-  background-color: #b17b99;
+background-color: #b17b99;
 }
 
-/* Accessibility focus styles */
-a:focus,
-button:focus,
-input:focus,
-textarea:focus {
-  outline: 3px solid #D46A9F;
-  outline-offset: 2px;
+/* ===== Responsive Media Queries ===== */
+
+/* Mobile Phones (max-width: 600px) */
+@media (max-width: 600px) {
+nav {
+flex-direction: column;
+height: auto;
+padding: 10px;
+text-align: center;
+}
+
+.nav-links {
+flex-direction: column;
+gap: 15px;
+margin-top: 10px;
+}
+
+main {
+padding: 0 15px;
+}
+
+h1, h2 {
+text-align: center;
+}
+
+.social-icons {
+justify-content: center;
+flex-wrap: wrap;
+}
+
+.contact-form form {
+width: 100%;
+}
+
+.download-cv {
+width: 100%;
+text-align: center;
+}
+
+.filters {
+flex-direction: column;
+align-items: stretch;
+}
+
+.filter-btn {
+width: 100%;
+text-align: center;
+}
+}
+
+/* Tablets (601px - 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+nav {
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+.nav-links {
+gap: 20px;
+}
+
+.portfolio-grid {
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.project-card {
+padding: 10px;
+}
+
+.download-cv {
+font-size: 0.95rem;
+padding: 10px 20px;
+}
+
+.typewriter {
+font-size: 1.5rem;
+}
+
+.social-icons {
+font-size: 1.5rem;
+}
+}
+
+/* Large Desktops (1025px and up) */
+@media (min-width: 1025px) {
+.portfolio-grid {
+grid-template-columns: repeat(3, 1fr);
+}
 }
