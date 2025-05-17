@@ -1,46 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Girly Portfolio Demo</title>
-<link rel="stylesheet" href="styles.css" />
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tafara Chitiyo Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- FontAwesome CDN for social icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
 <nav>
-  <div class="logo">Pink<span>Vibes</span></div>
+  <div class="logo">Tafara<span>Chitiyo</span></div>
   <div class="nav-links">
-    <a href="#">Home</a>
+    <a href="#intro" class="active">Introduction</a>
+    <a href="#skills">Skills</a>
     <a href="#portfolio">Portfolio</a>
+    <a href="#testimonials">Testimonials</a>
     <a href="#contact">Contact</a>
-    <button id="toggle-mode" title="Toggle Light/Dark Mode" aria-label="Toggle Light/Dark Mode">
-      <i class="fas fa-moon"></i>
-    </button>
   </div>
+  <button id="mode-toggle" aria-label="Toggle light/dark mode">🌙</button>
 </nav>
 
 <main>
-  <h1>Welcome to My Portfolio</h1>
-  <div class="typewriter">Creating with <span>Passion & Style</span></div>
-  <p>Elegant designs and heartfelt creations made just for you — let’s make something beautiful together.</p>
-  <a href="assets/CV_MyName.pdf" download class="btn">Download CV</a>
-  <div class="social-icons">
-    <i class="fab fa-instagram"></i>
-    <i class="fab fa-pinterest"></i>
-    <i class="fab fa-dribbble"></i>
-  </div>
-</main>
+  <section id="intro">
+    <h1>Hi, I’m Tafara Chitiyo</h1>
+    <div class="typewriter" aria-live="polite" aria-atomic="true"></div>
+    <p>Welcome to my portfolio website! Here you'll find my skills, projects, testimonials, and how to get in touch with me.</p>
+    <a href="myportfolio/cv.pdf" download="cv.pdf" class="download-cv" aria-label="Download my CV">Download CV</a>
+    <div class="social-icons" aria-label="Social media links">
+      <i class="fab fa-linkedin" title="LinkedIn" role="link" tabindex="0"></i>
+      <i class="fab fa-twitter" title="Twitter" role="link" tabindex="0"></i>
+      <i class="fab fa-instagram" title="Instagram" role="link" tabindex="0"></i>
+    </div>
+  </section>
 
-<section id="contact">
-  <h2>Contact Me</h2>
-  <form action="https://formspree.io/f/your-form-id" method="POST">
-    <input type="text" name="name" placeholder="Your name" required />
-    <input type="email" name="email" placeholder="Your email" required />
-    <textarea name="message" placeholder="Your message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</section>
+  <section id="skills" class="skills" aria-label="My skills">
+    <h2>My Skills</h2>
+    <div class="skill">
+      <div class="skill-name">HTML</div>
+      <div class="progress-bar"><div class="progress" data-progress="90"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">CSS</div>
+      <div class="progress-bar"><div class="progress" data-progress="85"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">JavaScript</div>
+      <div class="progress-bar"><div class="progress" data-progress="75"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">React</div>
+      <div class="progress-bar"><div class="progress" data-progress="70"></div></div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="filters" role="group" aria-label="Portfolio filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="web">Web</button>
+      <button class="filter-btn" data-filter="design">Design</button>
+      <button class="filter-btn" data-filter="branding">Branding</button>
+    </div>
+    <div class="portfolio-grid">
+      <div class="project-card" data-category="web">
+        <img src="https://placehold.co/400x250/png?text=Project+1" alt="Project 1 screenshot" />
+        <h3>Project 1</h3>
+        <p>A beautiful responsive website.</p>
+      </div>
+      <div class="project-card" data-category="design">
+        <img src="https://placehold.co/400x250/png?text=Project+2" alt="Project 2 screenshot" />
+        <h3>Project 2</h3>
+        <p>Creative graphic design work.</p>
+      </div>
+      <div class="project-card" data-category="branding">
+        <img src="https://placehold.co/400x250/png?text=Project+3" alt="Project 3 screenshot" />
+        <h3>Project 3</h3>
+        <p>Brand identity and logo creation.</p>
+      </div>
+      <div class="project-card" data-category="web">
+        <img src="https://placehold.co/400x250/png?text=Project+4" alt="Project 4 screenshot" />
+        <h3>Project 4</h3>
+        <p>Another amazing web project.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="testimonials" aria-label="Testimonials">
+    <h2>Testimonials</h2>
+    <div class="testimonial" tabindex="0">
+      <p>"Amazing work! She exceeded all expectations."</p>
+      <div class="author">- Ivy Rusike</div>
+    </div>
+    <div class="testimonial" tabindex="0">
+      <p>"Highly professional and creative portfolio."</p>
+      <div class="author">- Munopaishe Marauka</div>
+    </div>
+    <div class="testimonial" tabindex="0">
+      <p>"Loved working with her, very talented."</p>
+      <div class="author">-Mufaro Muzunze</div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-form" aria-label="Contact form">
+    <h2>Contact Me</h2>
+    <form id="contactForm" novalidate>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required aria-required="true" placeholder="Your full name" />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required aria-required="true" placeholder="your.email@example.com" />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required aria-required="true" placeholder="Your message here..." rows="5"></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+    <div id="formMessage" role="alert" style="margin-top: 15px; color: #D46A9F; font-weight: 700;"></div>
+  </section>
+</main>
 
 <script src="script.js"></script>
 </body>
