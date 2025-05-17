@@ -424,17 +424,20 @@ body.dark .filter-btn:hover {
   background-color: #db9cc2;
   color: #1e1e2f;
 }
-
-body.dark .testimonials .testimonial {
+body.dark .certifications .certification {
   background: #2b2542;
-  box-shadow: 0 0 20px #5f3
-f6f;
-color: #d8b9d3;
+  box-shadow: 0 0 20px #5f3f6f;
+  color: #d8b9d3;
 }
 
-body.dark .testimonials .author {
-color: #db9cc2;
+body.dark .certifications h3 {
+  color: #db9cc2;
 }
+
+body.dark .certifications p {
+  color: #d8b9d3;
+}
+
 
 body.dark .contact-form label {
 color: #d8b9d3;
