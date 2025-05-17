@@ -1,65 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="style.css">
-    <title>Portfolio Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple Portfolio Demo</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <nav>
-        <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
-            Tafara <span>Chitiyo</span>
-        </div>
-        <div class="nav-container">
-            <div class="links">
-                <div class="links">
-                    <a href="index.html" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">Home</a>
-                    <a href="skills.html" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">Skills</a>
-                    <a href="introduction.html" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">Introduction</a>
-                    <a href="portfolio.html" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">Portfolio</a>
-                    <a href="contact.html" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">Contact</a>
-                </div>
-            </div>
-        </div>
-        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
-                <div class="dropdown">
-                    <div class="links">
-                        <a href="index.html">Home</a>
-                        <a href="skills.html">Skills</a>
-                        <a href="introduction.html">Introduction</a>
-                        <a href="portfolio.html">Portfolio</a>
-                        <a href="contact.html">Contact</a>
-                        <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>  
-                    </div> 
-              </div>
-    </nav>
-    <div class="social-links" data-aos="fade-up" data-aos-delay="300">
-        <a href="https://www.linkedin.com/in/tafara-chitiyo-048174283/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="https://github.com/Naomi-Faffy" target="_blank"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.facebook.com/tafara.chitiyo.2025" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://x.com/Tafara_naomi" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-      </div>
-      
-    <section>
-        <div class="main-container">
-            <div class="content">
-                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="600">Hey I'm <span>Tafara</span></h1>
-                <div data-aos="fade-left" data-aos-duration="1500" data-aos-delay="800" class="typewriter">I'm a <span class="typewriter-text"></span><label for="">|</label></div>
-                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1000">Passionate Computer Science student ata the University of Zimbabwe. Browse through my website to know more about me.</p>
-                <a href="resume.pdf" download><button>Download PDF</button></a>
-            </div>
-            <div class="image" data-aos="zoom-in" data-aos-duration="2000">
-                <img src="naomi.jpg" alt="">
-            </div>
-        </div>
-    </section>
-    <script src="script.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init({offset:0});
-    </script>
+  <nav>
+    <div class="logo">My<span>Portfolio</span></div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Portfolio</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <h1>Welcome to My Portfolio</h1>
+    <div class="typewriter"></div>
+    <p>Creative works and projects displayed here.</p>
+    <button id="contactBtn">Contact Me</button>
+
+    <div class="social-icons">
+      <a href="#" aria-label="Instagram" class="icon instagram">IG</a>
+      <a href="#" aria-label="LinkedIn" class="icon linkedin">IN</a>
+      <a href="#" aria-label="GitHub" class="icon github">GH</a>
+    </div>
+  </main>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
