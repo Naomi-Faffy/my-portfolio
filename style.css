@@ -424,18 +424,56 @@ body.dark .filter-btn:hover {
   background-color: #db9cc2;
   color: #1e1e2f;
 }
+/* Certifications (formerly Testimonials) */
+.certifications {
+  background-color: #fdf6fb;
+  padding: 40px 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(212, 106, 159, 0.2);
+  transition: background 0.3s ease;
+}
+
+.certifications h2 {
+  text-align: center;
+  color: #d46a9f;
+  margin-bottom: 30px;
+  font-size: 2em;
+}
+
+.certification {
+  background: #fff0f7;
+  color: #5a375f;
+  padding: 20px;
+  margin: 15px auto;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(212, 106, 159, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.certification:hover {
+  transform: scale(1.02);
+}
+
+.certification .author {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #9e4d8b;
+}
+
+/* Dark mode */
+body.dark .certifications {
+  background-color: #1a152a;
+}
+
 body.dark .certifications .certification {
   background: #2b2542;
   box-shadow: 0 0 20px #5f3f6f;
   color: #d8b9d3;
 }
 
-body.dark .certifications h3 {
+body.dark .certifications .author {
   color: #db9cc2;
-}
-
-body.dark .certifications p {
-  color: #d8b9d3;
 }
 
 
