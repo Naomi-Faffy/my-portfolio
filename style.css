@@ -424,20 +424,19 @@ body.dark .filter-btn:hover {
   background-color: #db9cc2;
   color: #1e1e2f;
 }
-/* Certifications (formerly Testimonials) */
 .certifications {
   background-color: #fdf6fb;
   padding: 40px 20px;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(212, 106, 159, 0.2);
   transition: background 0.3s ease;
+  text-align: center;
 }
 
 .certifications h2 {
-  text-align: center;
   color: #d46a9f;
-  margin-bottom: 30px;
   font-size: 2em;
+  margin-bottom: 30px;
 }
 
 .certification {
