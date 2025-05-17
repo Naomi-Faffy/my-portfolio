@@ -1,14 +1,15 @@
+
 *{
     padding: 0;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     box-sizing: border-box;
 }
 
 body{
     width: 100%;
     height: 100vh;
-    background-color: #c0855b;
+    background-color: #FAFAFA;
     overflow: hidden;
 }
 
@@ -27,7 +28,7 @@ nav{
 }
 
 .logo{
-    color: black;
+    color: #2D2D2D;
     position: absolute;
     top: 18px;
     left: 15px;
@@ -36,8 +37,8 @@ nav{
 }
 
 .logo span{
-    color: #50352a;
-    text-shadow: 0 0 10px #50352a;
+    color: #4CAF50;
+    text-shadow: 0 0 10px #4CAF50;
 }
 
 .hamburg,
@@ -46,7 +47,7 @@ nav{
     position: absolute;
     right: 15px;
     top: 10px;
-    color: white;
+    color: #2D2D2D;
     display: none;
     font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
 
@@ -54,15 +55,15 @@ nav{
 
 .nav-container .links a{
     font-size: 1.2rem;
-    color: white;
+    color: #2D2D2D;
     margin: 0 20px;
     text-decoration: none;
     transition: 0.3s linear;
 }
 
 .nav-container .links a:hover{
-    color: #50352a;
-    border-bottom: 2px solid #50352a;
+    color: #4CAF50;
+    border-bottom: 2px solid #4CAF50;
 }
 
 .dropdown{
@@ -79,7 +80,7 @@ nav{
 
 .dropdown .links a{
     display: flex;
-    color: white;
+    color: #2D2D2D;
     text-decoration: none;
     padding: 15px 0;
     justify-content: center;
@@ -93,7 +94,7 @@ nav{
 }
 
 .dropdown .links a:hover{
-    background-color: #50352a;
+    background-color: #4CAF50;
 }
 
 section{
@@ -102,13 +103,13 @@ height: 90vh;
 }
 .section-content {
     padding: 50px;
-    color: white;
-    background-color: #111;
+    color: #2D2D2D;
+    background-color: #FFFFFF;
     min-height: 90vh;
 }
 
 .section-content h1 {
-    color: #50352a;
+    color: #4CAF50;
     font-size: 2rem;
     margin-bottom: 20px;
 }
@@ -125,9 +126,9 @@ height: 90vh;
 }
 
 .project-card {
-    background-color: #222;
+    background-color: #FFFFFF;
     padding: 20px;
-    border: 1px solid #50352a;
+    border: 1px solid #4CAF50;
     border-radius: 10px;
 }
 
@@ -140,10 +141,10 @@ height: 90vh;
 }
 
 .main-container .content{
-    color: black;
+    color: #2D2D2D;
     width: 40%;
     min-height: 100px;
-    box-shadow: 0 0 120px 50px black;
+    box-shadow: 0 0 50px rgba(0,0,0,0.1);
 }
 
 .content h1{
@@ -152,8 +153,8 @@ height: 90vh;
 
 .content h1 span{
     font-weight: 700;
-    text-shadow: 0 0 10px #50352a;
-    color: #50352a;
+    text-shadow: 0 0 10px #4CAF50;
+    color: #4CAF50;
 }
 
 .content .typewriter{
@@ -163,8 +164,8 @@ height: 90vh;
 }
 
 .typewriter span{
-    color: #50352a;
-    text-shadow: 0 0  10px #50352a;
+    color: #4CAF50;
+    text-shadow: 0 0  10px #4CAF50;
 }
 
 .content p{
@@ -173,14 +174,14 @@ height: 90vh;
 }
 
 .social-links i{
-    color: #50352a;
+    color: #4CAF50;
     margin: 0 15px;
     font-size: 1.8rem;
     transition: 0.3s linear;
 }
 
 .social-links i:hover{
-    filter: drop-shadow(0 0 10px #50352a);
+    filter: drop-shadow(0 0 10px #4CAF50);
     scale: 1.3;
 }
 
@@ -188,8 +189,8 @@ height: 90vh;
     width: 50%;
     height: 6vh;
     margin: 30px;
-    background-color: #50352a;
-    color: black;
+    background-color: #4CAF50;
+    color: #2D2D2D;
     border: none;
     outline: none;
     font-size: 120%;
@@ -200,10 +201,10 @@ height: 90vh;
 
 .content button:hover{
     scale: 1.1;
-    border: 2px solid #50352a;
-    background-color: transparent;
+    border: 2px solid #4CAF50;
+    background-color: #FAFAFA;
     font-weight: 700;
-    box-shadow: 0 0 40px 5px #50352a;
+    box-shadow: 0 0 40px 5px #4CAF50;
 }
 
 .main-container .image{
@@ -211,7 +212,7 @@ height: 90vh;
     height: 80vh;
     border-radius: 100%;
     overflow: hidden;
-    box-shadow: 0 0 50px #50352a;
+    box-shadow: 0 0 50px #4CAF50;
     z-index: -1;
 }
 
