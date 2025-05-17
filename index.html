@@ -13,6 +13,7 @@
 <body>
 <nav>
   <div class="logo">Tafara<span>Chitiyo</span></div>
+  <button id="menu-toggle" aria-label="Toggle menu">☰</button> <!-- Added menu toggle button -->
   <div class="nav-links">
     <a href="#intro" class="active">Introduction</a>
     <a href="#skills">Skills</a>
@@ -29,29 +30,28 @@
     <div class="typewriter" aria-live="polite" aria-atomic="true"></div>
     <p>Welcome to my portfolio website! Here you'll find my skills, projects, testimonials, and how to get in touch with me.</p>
     <a href="tafara.pdf" download="tafara.pdf" class="download-cv" aria-label="Download my CV">
-  Download CV
-</a>
+      Download CV
+    </a>
     <div class="social-icons" aria-label="Social media links">
-  <a href="https://wa.me/+263786018957" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-  <a href="https://www.linkedin.com/in/tafara-chitiyo-048174283/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
-    <i class="fab fa-linkedin"></i>
-  </a>
-  <a href="https://www.instagram.com/tafara.chitiyo/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a href="https://github.com/Naomi-Faffy" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
-    <i class="fab fa-github"></i>
-  </a>
-  <a href="https://x.com/Tafara_naomi" target="_blank" rel="noopener" aria-label="Twitter" title="Twitter">
-    <i class="fab fa-twitter"></i>
-  </a>
-  <a href="https://www.facebook.com/tafara.chitiyo.2025" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
-    <i class="fab fa-facebook"></i>
-  </a>
-</div>
-
+      <a href="https://wa.me/+263786018957" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/tafara-chitiyo-048174283/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://www.instagram.com/tafara.chitiyo/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://github.com/Naomi-Faffy" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://x.com/Tafara_naomi" target="_blank" rel="noopener" aria-label="Twitter" title="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.facebook.com/tafara.chitiyo.2025" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
+        <i class="fab fa-facebook"></i>
+      </a>
+    </div>
   </section>
 
   <section id="skills" class="skills" aria-label="My skills">
@@ -141,5 +141,14 @@
 </main>
 
 <script src="script.js"></script>
+<script>
+  // Mobile menu toggle script added
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
 </body>
 </html>

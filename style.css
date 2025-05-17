@@ -552,3 +552,60 @@ font-size: 1.5rem;
 grid-template-columns: repeat(3, 1fr);
 }
 }
+/* ===== Your original CSS starts here ===== */
+
+/* (Assuming your existing CSS is here unchanged) */
+
+/* ===== Additions for mobile dropdown menu ===== */
+
+/* Hide menu toggle button by default */
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+  margin-left: auto;
+}
+
+/* Small screen adjustments */
+@media (max-width: 768px) {
+  /* Show the menu toggle button */
+  #menu-toggle {
+    display: block;
+  }
+
+  /* Hide nav-links by default on mobile */
+  nav .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 60px; /* height of nav bar */
+    left: 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 999;
+  }
+
+  /* Show nav-links when active */
+  nav .nav-links.active {
+    display: flex;
+  }
+
+  /* Style the nav links vertically */
+  nav .nav-links a {
+    padding: 12px 20px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  /* Nav bar uses flexbox for mobile */
+  nav {
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    position: relative;
+    height: 60px;
+  }
+}
