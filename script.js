@@ -1,7 +1,12 @@
-document.getElementById("toggle-mode").addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
+const toggleBtn = document.getElementById("toggle-mode");
+const icon = toggleBtn.querySelector("i");
 
-  const icon = document.querySelector("#toggle-mode i");
-  icon.classList.toggle("fa-moon");
-  icon.classList.toggle("fa-sun");
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+  
+  if (icon.classList.contains("fa-moon")) {
+    icon.classList.replace("fa-moon", "fa-sun");
+  } else {
+    icon.classList.replace("fa-sun", "fa-moon");
+  }
 });

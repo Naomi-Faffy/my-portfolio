@@ -1,23 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-:root {
-  --bg: #FFF5F8;
-  --text: #5B2C6F;
-  --accent: #D46A9F;
-  --accent-dark: #B24B81;
-  --light: #FFFFFF;
-  --shadow: rgba(181, 126, 180, 0.3);
-}
-
-body.dark-mode {
-  --bg: #2C003E;
-  --text: #FADCE8;
-  --accent: #E75480;
-  --accent-dark: #B43C6B;
-  --light: #3B003D;
-  --shadow: rgba(255, 182, 193, 0.3);
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -26,9 +8,16 @@ body.dark-mode {
 }
 
 body {
-  background-color: var(--bg);
-  color: var(--text);
+  background-color: #FFF5F8;
+  color: #5B2C6F;
+  height: 100vh;
+  overflow-x: hidden;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: #2C003E;
+  color: #FADCE8;
 }
 
 nav {
@@ -36,21 +25,37 @@ nav {
   display: flex;
   align-items: center;
   padding: 0 20px;
-  background-color: var(--light);
-  box-shadow: 0 2px 8px var(--shadow);
+  background-color: #F8E1F4;
+  box-shadow: 0 2px 8px rgba(181, 126, 180, 0.3);
   position: sticky;
   top: 0;
   z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode nav {
+  background-color: #3B003D;
+  box-shadow: 0 2px 8px rgba(255, 182, 193, 0.3);
 }
 
 .logo {
   font-weight: 900;
   font-size: 1.8rem;
   color: #9B59B6;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .logo {
+  color: #E75480;
 }
 
 .logo span {
-  color: var(--accent);
+  color: #D46A9F;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .logo span {
+  color: #F48FB1;
 }
 
 .nav-links {
@@ -60,16 +65,25 @@ nav {
 }
 
 .nav-links a {
-  color: var(--text);
+  color: #5B2C6F;
   margin-left: 25px;
   text-decoration: none;
   font-weight: 600;
-  transition: 0.3s ease;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+body.dark-mode .nav-links a {
+  color: #FADCE8;
 }
 
 .nav-links a:hover {
-  color: var(--accent);
-  border-bottom: 2px solid var(--accent);
+  color: #D46A9F;
+  border-bottom: 2px solid #D46A9F;
+}
+
+body.dark-mode .nav-links a:hover {
+  color: #F48FB1;
+  border-bottom: 2px solid #F48FB1;
 }
 
 #toggle-mode {
@@ -78,55 +92,97 @@ nav {
   border: none;
   font-size: 1.2rem;
   cursor: pointer;
-  color: var(--text);
+  color: #5B2C6F;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode #toggle-mode {
+  color: #FADCE8;
 }
 
 main {
-  padding: 50px 20px;
-  text-align: center;
-  background-color: var(--light);
-  margin: 20px;
+  height: auto;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  max-width: 700px;
+  background-color: #FFFFFF;
   border-radius: 15px;
-  box-shadow: 0 0 30px var(--shadow);
+  box-shadow: 0 0 30px #E2B0CC;
+  padding: 40px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode main {
+  background-color: #4A2B5A;
+  box-shadow: 0 0 30px #F48FB1;
 }
 
 h1 {
   color: #9B59B6;
   font-size: 2.7rem;
   margin-bottom: 10px;
-  text-shadow: 0 0 10px var(--accent);
+  text-shadow: 0 0 10px #D46A9F;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+body.dark-mode h1 {
+  color: #F48FB1;
+  text-shadow: 0 0 10px #F48FB1;
 }
 
 .typewriter {
   font-weight: 700;
   font-size: 2rem;
-  color: var(--accent);
+  color: #D46A9F;
   margin-bottom: 20px;
-  text-shadow: 0 0 8px var(--accent);
+  text-shadow: 0 0 8px #D46A9F;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+body.dark-mode .typewriter {
+  color: #F48FB1;
+  text-shadow: 0 0 8px #F48FB1;
+}
+
+.typewriter span {
+  font-style: italic;
 }
 
 p {
   font-size: 1.2rem;
   max-width: 600px;
-  margin: 0 auto 30px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #7D3C98;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode p {
+  color: #E8B5D1;
 }
 
 .btn {
-  background-color: var(--accent);
-  color: #fff;
-  padding: 15px 40px;
+  background-color: #D46A9F;
+  color: #FFFFFF;
   border: none;
+  padding: 15px 45px;
   border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 1.1rem;
-  transition: 0.3s ease;
-  box-shadow: 0 0 15px var(--accent);
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 15px #D46A9F;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .btn:hover {
-  background-color: var(--accent-dark);
-  box-shadow: 0 0 30px var(--accent-dark);
+  background-color: #B24B81;
+  box-shadow: 0 0 30px #B24B81;
 }
 
 .social-icons {
@@ -134,27 +190,43 @@ p {
 }
 
 .social-icons i {
-  color: var(--accent);
+  color: #D46A9F;
   font-size: 1.8rem;
   margin: 0 14px;
   cursor: pointer;
-  text-shadow: 0 0 6px var(--accent);
   transition: filter 0.3s ease;
+  text-shadow: 0 0 6px #D46A9F;
+}
+
+body.dark-mode .social-icons i {
+  color: #F48FB1;
+  text-shadow: 0 0 6px #F48FB1;
 }
 
 .social-icons i:hover {
-  filter: drop-shadow(0 0 12px var(--accent));
+  filter: drop-shadow(0 0 12px #D46A9F);
+}
+
+body.dark-mode .social-icons i:hover {
+  filter: drop-shadow(0 0 12px #F48FB1);
 }
 
 section#contact {
-  padding: 40px 20px;
+  margin: 40px auto 60px;
+  max-width: 700px;
+  padding: 20px;
   text-align: center;
 }
 
 section#contact h2 {
   font-size: 2rem;
-  color: var(--accent);
+  color: #D46A9F;
   margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode section#contact h2 {
+  color: #F48FB1;
 }
 
 form {
@@ -162,35 +234,79 @@ form {
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  max-width: 500px;
-  margin: auto;
 }
 
 form input,
 form textarea {
   width: 100%;
+  max-width: 600px;
   padding: 12px 20px;
-  border: 2px solid var(--accent);
+  border: 2px solid #D46A9F;
   border-radius: 10px;
   font-size: 1rem;
   resize: none;
-  background: var(--light);
-  color: var(--text);
+  background: #FFFFFF;
+  color: #5B2C6F;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+body.dark-mode form input,
+body.dark-mode form textarea {
+  background: #5B2C6F;
+  color: #FADCE8;
+  border-color: #F48FB1;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #C48CAD;
+}
+
+body.dark-mode form input::placeholder,
+body.dark-mode form textarea::placeholder {
+  color: #EAC7D5;
 }
 
 form button {
   margin-top: 10px;
   padding: 12px 35px;
-  background-color: var(--accent);
+  background-color: #D46A9F;
   color: #fff;
   font-weight: bold;
   border: none;
   border-radius: 30px;
   font-size: 1rem;
   cursor: pointer;
-  box-shadow: 0 0 15px var(--accent);
+  box-shadow: 0 0 15px #D46A9F;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 form button:hover {
-  background-color: var(--accent-dark);
+  background-color: #B24B81;
+  box-shadow: 0 0 30px #B24B81;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  main {
+    margin: 20px 10px;
+    padding: 30px 20px;
+  }
+
+  section#contact {
+    margin: 30px 10px 50px;
+  }
+
+  nav {
+    padding: 0 10px;
+  }
+
+  .nav-links a {
+    margin-left: 15px;
+  }
+
+  .btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
 }
