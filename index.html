@@ -153,7 +153,7 @@
   </div>
 </section>
 
-<section id="contact" class="contact-form" aria-label="Contact form">
+<<section id="contact" class="contact-form" aria-label="Contact form">
   <h2>Contact Me</h2>
   <form
     id="contactForm"
@@ -191,9 +191,13 @@
             headers: { 'Accept': 'application/json' }
           });
 
+          const data = await response.json();
+
           if (response.ok) {
             messageDiv.textContent = 'Thanks for your message! I’ll get back to you soon.';
             form.reset();
+          } else if (data?.errors) {
+            messageDiv.textContent = data.errors.map(err => err.message).join(", ");
           } else {
             messageDiv.textContent = 'Oops! Something went wrong. Please try again.';
           }
