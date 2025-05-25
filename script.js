@@ -107,11 +107,10 @@ filterButtons.forEach(btn => {
   });
 });
 
-// Contact form validation and simple submission simulation
 const form = document.getElementById('contactForm');
 const formMessage = document.getElementById('formMessage');
 
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
   const name = form.name.value.trim();
@@ -119,21 +118,43 @@ form.addEventListener('submit', (e) => {
   const message = form.message.value.trim();
 
   if (!name || !email || !message) {
-    formMessage.textContent = 'Please fill out all fields.';
     formMessage.style.color = '#D46A9F';
+    formMessage.textContent = 'Please fill out all fields.';
     return;
   }
 
   if (!validateEmail(email)) {
-    formMessage.textContent = 'Please enter a valid email address.';
     formMessage.style.color = '#D46A9F';
+    formMessage.textContent = 'Please enter a valid email address.';
     return;
   }
 
-  formMessage.style.color = '#7D3C98';
-  formMessage.textContent = 'Thank you for your message! I will get back to you soon.';
+  const formData = new FormData(form);
 
-  form.reset();
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      formMessage.style.color = '#7D3C98';
+      formMessage.textContent = 'Thank you for your message! I will get back to you soon.';
+      form.reset();
+    } else if (data?.errors) {
+      formMessage.style.color = '#D46A9F';
+      formMessage.textContent = data.errors.map(err => err.message).join(", ");
+    } else {
+      formMessage.style.color = '#D46A9F';
+      formMessage.textContent = 'Oops! Something went wrong. Please try again.';
+    }
+  } catch (error) {
+    formMessage.style.color = '#D46A9F';
+    formMessage.textContent = 'Error sending message. Check your connection.';
+  }
 });
 
 function validateEmail(email) {
