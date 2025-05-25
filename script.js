@@ -107,57 +107,63 @@ filterButtons.forEach(btn => {
   });
 });
 
-const form = document.getElementById('contactForm');
-const formMessage = document.getElementById('formMessage');
+(function() {
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById('contactForm');
+    const formMessage = document.getElementById('formMessage');
 
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
+    if (!form) return; // safety check
 
-  const name = form.name.value.trim();
-  const email = form.email.value.trim();
-  const message = form.message.value.trim();
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
 
-  if (!name || !email || !message) {
-    formMessage.style.color = '#D46A9F';
-    formMessage.textContent = 'Please fill out all fields.';
-    return;
-  }
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const message = form.message.value.trim();
 
-  if (!validateEmail(email)) {
-    formMessage.style.color = '#D46A9F';
-    formMessage.textContent = 'Please enter a valid email address.';
-    return;
-  }
+      if (!name || !email || !message) {
+        formMessage.style.color = '#D46A9F';
+        formMessage.textContent = 'Please fill out all fields.';
+        return;
+      }
 
-  const formData = new FormData(form);
+      if (!validateEmail(email)) {
+        formMessage.style.color = '#D46A9F';
+        formMessage.textContent = 'Please enter a valid email address.';
+        return;
+      }
 
-  try {
-    const response = await fetch(form.action, {
-      method: 'POST',
-      body: formData,
-      headers: { 'Accept': 'application/json' }
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          formMessage.style.color = '#7D3C98';
+          formMessage.textContent = 'Thank you for your message! I will get back to you soon.';
+          form.reset();
+        } else if (data?.errors) {
+          formMessage.style.color = '#D46A9F';
+          formMessage.textContent = data.errors.map(err => err.message).join(", ");
+        } else {
+          formMessage.style.color = '#D46A9F';
+          formMessage.textContent = 'Oops! Something went wrong. Please try again.';
+        }
+      } catch (error) {
+        formMessage.style.color = '#D46A9F';
+        formMessage.textContent = 'Error sending message. Check your connection.';
+      }
     });
 
-    const data = await response.json();
-
-    if (response.ok) {
-      formMessage.style.color = '#7D3C98';
-      formMessage.textContent = 'Thank you for your message! I will get back to you soon.';
-      form.reset();
-    } else if (data?.errors) {
-      formMessage.style.color = '#D46A9F';
-      formMessage.textContent = data.errors.map(err => err.message).join(", ");
-    } else {
-      formMessage.style.color = '#D46A9F';
-      formMessage.textContent = 'Oops! Something went wrong. Please try again.';
+    function validateEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email.toLowerCase());
     }
-  } catch (error) {
-    formMessage.style.color = '#D46A9F';
-    formMessage.textContent = 'Error sending message. Check your connection.';
-  }
-});
-
-function validateEmail(email) {
-  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return re.test(email.toLowerCase());
-}
+  });
+})();
