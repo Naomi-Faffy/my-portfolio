@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tafara Chitiyo - Network & Cybersecurity Specialist</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Netflix+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="logo-container">
+            <img src="logo.svg" alt="TC Logo" class="loading-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="fallback-logo" style="display:none; width:120px; height:120px; background:#e50914; border-radius:50%; color:white; font-size:3rem; justify-content:center; align-items:center; font-weight:bold;">TC</div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" class="main-content hidden">
+        
+        <!-- Browse/Home Page -->
+        <div id="browse-page" class="page active">
+            <div class="browse-container">
+                <div class="logo-container">
+                    <img src="logo.svg" alt="TC Logo" class="main-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="fallback-logo" style="display:none; width:100px; height:100px; background:#e50914; border-radius:50%; color:white; font-size:2.5rem; justify-content:center; align-items:center; font-weight:bold;">TC</div>
+                </div>
+                <h1 class="browse-title">Who's Looking?</h1>
+                <div class="profiles-grid">
+                    <div class="profile-card" data-profile="recruiter">
+                        <div class="profile-avatar blue-avatar">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3>recruiter</h3>
+                    </div>
+                    <div class="profile-card" data-profile="developer">
+                        <div class="profile-avatar grey-avatar">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>developer</h3>
+                    </div>
+                    <div class="profile-card" data-profile="cybersecurity">
+                        <div class="profile-avatar red-avatar">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>cybersecurity</h3>
+                    </div>
+                    <div class="profile-card" data-profile="student">
+                        <div class="profile-avatar yellow-avatar">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>student</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile Page -->
+        <div id="profile-page" class="page">
+            <!-- Navigation -->
+            <nav class="navbar">
+                <div class="nav-container">
+                    <img src="logo.svg" alt="TC Logo" class="nav-logo" onclick="goToBrowse()" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="fallback-logo" onclick="goToBrowse()" style="display:none; width:50px; height:50px; background:#e50914; border-radius:50%; color:white; font-size:1.2rem; justify-content:center; align-items:center; font-weight:bold; cursor:pointer;">TC</div>
+                    <ul class="nav-menu">
+                        <li><a href="#" onclick="showPage('profile-page')">Home</a></li>
+                        <li><a href="#" onclick="showPage('experience-page')">Professional</a></li>
+                        <li><a href="#" onclick="showPage('skills-page')">Skills</a></li>
+                        <li><a href="#" onclick="showPage('projects-page')">Projects</a></li>
+                        <li><a href="#" onclick="showPage('contact-page')">Hire Me</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Hero Section -->
+            <div class="hero-section">
+                <div class="hero-content">
+                    <div class="profile-info">
+                        <div class="profile-avatar-large" id="profile-avatar-large">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="profile-details">
+                            <h1>Tafara Chitiyo - Network & Cybersecurity Specialist</h1>
+                            <p class="profile-description">
+                                Passionate and driven Computer Science student at the University of Zimbabwe with a keen interest in computer networking, cybersecurity, and systems administration. Backed by strong academic performance and a natural curiosity for technology, eager to build hands-on experience and contribute to real-world IT environments.
+                            </p>
+                            <p class="profile-description">
+                                With experience in administrative roles and exposure to programming, AI, and networking simulations, combines soft skills such as discretion and communication with technical abilities in languages like Python and JavaScript. Quick to adapt, works well in teams, and thrives on learning new tools and technologies. Aims to become a competent IT professional who adds measurable value to any organization.
+                            </p>
+                            <div class="action-buttons">
+                                <button class="btn-primary" onclick="window.open('mailto:faffynaomi@gmail.com', '_blank')">
+                                    <i class="fas fa-envelope"></i> Resume
+                                </button>
+                                <button class="btn-secondary" onclick="window.open('https://linkedin.com/in/tafara-chitiyo', '_blank')">
+                                    <i class="fab fa-linkedin"></i> LinkedIn
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Today's Top Picks -->
+            <div class="section">
+                <h2 class="section-title">Today's Top Picks for <span id="profile-type">recruiter</span></h2>
+                <div class="picks-grid">
+                    <div class="pick-card" onclick="showPage('experience-page')">
+                        <div class="pick-image">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3>Work Experience</h3>
+                    </div>
+                    <div class="pick-card" onclick="showPage('skills-page')">
+                        <div class="pick-image">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>Skills</h3>
+                    </div>
+                    <div class="pick-card" onclick="showPage('projects-page')">
+                        <div class="pick-image">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h3>Projects</h3>
+                    </div>
+                    <div class="pick-card">
+                        <div class="pick-image">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3>Certifications</h3>
+                    </div>
+                    <div class="pick-card">
+                        <div class="pick-image">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Education</h3>
+                    </div>
+                    <div class="pick-card" onclick="showPage('contact-page')">
+                        <div class="pick-image">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Contact Me</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Continue Watching -->
+            <div class="section">
+                <h2 class="section-title">Continue Exploring for <span id="profile-type-2">recruiter</span></h2>
+                <div class="continue-grid">
+                    <div class="continue-card">
+                        <div class="continue-image">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3>Networking</h3>
+                    </div>
+                    <div class="continue-card">
+                        <div class="continue-image">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Cybersecurity</h3>
+                    </div>
+                    <div class="continue-card">
+                        <div class="continue-image">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>AI & ML</h3>
+                    </div>
+                    <div class="continue-card" onclick="showPage('contact-page')">
+                        <div class="continue-image">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Contact Me</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Work Experience Page -->
+        <div id="experience-page" class="page">
+            <nav class="navbar">
+                <div class="nav-container">
+                    <img src="logo.svg" alt="TC Logo" class="nav-logo" onclick="goToBrowse()" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="fallback-logo" onclick="goToBrowse()" style="display:none; width:50px; height:50px; background:#e50914; border-radius:50%; color:white; font-size:1.2rem; justify-content:center; align-items:center; font-weight:bold; cursor:pointer;">TC</div>
+                    <ul class="nav-menu">
+                        <li><a href="#" onclick="showPage('profile-page')">Home</a></li>
+                        <li><a href="#" onclick="showPage('experience-page')" class="active">Professional</a></li>
+                        <li><a href="#" onclick="showPage('skills-page')">Skills</a></li>
+                        <li><a href="#" onclick="showPage('projects-page')">Projects</a></li>
+                        <li><a href="#" onclick="showPage('contact-page')">Hire Me</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="page-content">
+                <div class="profile-header">
+                    <div class="profile-avatar-small blue-avatar">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                </div>
+
+                <h1 class="page-title">📅 Work Experience & Education Timeline</h1>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Administrator Assistant <span class="emoji">🏛️</span></h3>
+                            <h4>Messenger of Court - Marondera, Zimbabwe</h4>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Microsoft Office Suite</span>
+                                <span class="tech-tag">Telephony Systems</span>
+                            </div>
+                            <ul class="achievements">
+                                <li>📞 Managed and routed a high volume of calls, providing accurate information and ensuring clients reached the right departments.</li>
+                                <li>🔒 Handled confidential legal and administrative documents securely and responsibly.</li>
+                                <li>📋 Organized office resources and maintained a clean, professional workspace to support court operations.</li>
+                                <li>📬 Distributed incoming correspondence and maintained high standards of confidentiality and accuracy.</li>
+                            </ul>
+                            <div class="timeline-date">Dec 2022 - Aug 2023</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>BSc Honours in Computer Science <span class="emoji">🎓</span></h3>
+                            <h4>University of Zimbabwe</h4>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Networking</span>
+                                <span class="tech-tag">Cybersecurity</span>
+                                <span class="tech-tag">Programming</span>
+                                <span class="tech-tag">System Administration</span>
+                            </div>
+                            <ul class="achievements">
+                                <li>🖥️ Developing expertise in computer networking, cybersecurity, and systems administration.</li>
+                                <li>👨‍💻 Strong academic performance with hands-on experience in programming and IT environments.</li>
+                                <li>🔬 Active participation in practical labs and networking simulations using Cisco Packet Tracer.</li>
+                            </ul>
+                            <div class="timeline-date">2023 - 2027</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>CS50's Introduction to AI with Python <span class="emoji">🤖</span></h3>
+                            <h4>HarvardX</h4>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Machine Learning</span>
+                                <span class="tech-tag">AI Algorithms</span>
+                                <span class="tech-tag">Jupyter Notebook</span>
+                            </div>
+                            <ul class="achievements">
+                                <li>🧠 Mastered fundamental AI concepts including search algorithms, logic, and machine learning.</li>
+                                <li>🐍 Developed proficiency in Python for AI applications and data analysis.</li>
+                                <li>📊 Completed hands-on projects implementing various AI techniques and algorithms.</li>
+                            </ul>
+                            <div class="timeline-date">2024</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Advanced Level Education <span class="emoji">🏅</span></h3>
+                            <h4>Monte Cassino Girls High School</h4>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Mathematics</span>
+                                <span class="tech-tag">Physics</span>
+                                <span class="tech-tag">Computer Science</span>
+                            </div>
+                            <ul class="achievements">
+                                <li>🎯 Achieved 12 Points in A-Level examinations with distinction in STEM subjects.</li>
+                                <li>💻 Developed foundational knowledge in Computer Science and problem-solving.</li>
+                            </ul>
+                            <div class="timeline-date">2022</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills Page -->
+        <div id="skills-page" class="page">
+            <nav class="navbar">
+                <div class="nav-container">
+                    <img src="logo.svg" alt="TC Logo" class="nav-logo" onclick="goToBrowse()" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="fallback-logo" onclick="goToBrowse()" style="display:none; width:50px; height:50px; background:#e50914; border-radius:50%; color:white; font-size:1.2rem; justify-content:center; align-items:center; font-weight:bold; cursor:pointer;">TC</div>
+                    <ul class="nav-menu">
+                        <li><a href="#" onclick="showPage('profile-page')">Home</a></li>
+                        <li><a href="#" onclick="showPage('experience-page')">Professional</a></li>
+                        <li><a href="#" onclick="showPage('skills-page')" class="active">Skills</a></li>
+                        <li><a href="#" onclick="showPage('projects-page')">Projects</a></li>
+                        <li><a href="#" onclick="showPage('contact-page')">Hire Me</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="page-content">
+                <div class="skills-container">
+                    <div class="skills-category">
+                        <h2>Frontend</h2>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <h3>H T M L & C S S</h3>
+                                <p>Web Markup and Styling</p>
+                            </div>
+                            <div class="skill-card">
+                                <h3>J a v a S c r i p t</h3>
+                                <p>Programming Language</p>
+                            </div>
+                            <div class="skill-card">
+                                <h3>T y p e S c r i p t</h3>
+                                <p>Type-safe JavaScript</p>
+                            </div>
+                            <div class="skill-card">
+                                <h3>T a i l w i n d C S S</h3>
+                                <p>Utility-first CSS Framework</p>
+                            </div>
+                            <div class="skill-card">
+                                <h3>N e x t . j s</h3>
+                                <p>React Framework</p>
+                            </div>
+                            <div class="skill-card">
+                                <h3>W o r d P r e s s</h3>
+                                <p>Content Management System</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-category">
+                        <h2>Backend & Programming</h2>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <h3>P y t h o n</h3>
+                                <p>Programming Language</p>
+                            </div>
+                            <div class="skill-card">
+                                <h3>J a v a</h3>
+                                <p>Object-Oriented Programming</p>
+                            </div>
+                            <div class="skill-card">
+                                <h3>V i s u a l B a s i c</h3>
+                                <p>Microsoft Programming Language</p>
+                            </div>
+                            <div class="skill-card">
+                                <h3>A r d u i n o ( C / C + + )</h3>
+                                <p>Embedded Systems Programming</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-category">
+                        <h2>Databases</h2>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <h3>P o s t g r e S Q L</h3>
+                                <p>Relational Database</p>
+                            </div>
+                            <div class="skill-card">
+                                <h3>M y S Q L</h3>
+                                <p>Relational Database</p>
+                            </div>
+                            <div class="skill-card">
+                                <h3>M o n g o D B</h3>
+                                <p>NoSQL Database</p>
+                            </div>
+                            <div class="skill-card">
+                                <h3>S Q L Q u e r i e s</h3>
+                                <p>Database Management</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-category">
+                        <h2>Networking & Cybersecurity</h2>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <h3>C i s c o P a c k e t T r a c e r</h3>
+                                <p>Network Simulation Tool</p>
+                            </div>
+                            <div class="skill-card">
+                                <h3>N e t w o r k S e c u r i t y</h3>
+                                <p>Security Protocols & Analysis</p>
+                            </div>
+                            <div class="skill-card">
+                                <h3>S y s t e m A d m i n</h3>
+                                <p>Server & Network Management</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-category">
+                        <h2>Tools & Other Skills</h2>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <h3>Z o h o C R M</h3>
+                                <p>Customer Relationship Management</p>
+                            </div>
+                            <div class="skill-card">
+                                <h3>N o t i o n</h3>
+                                <p>Productivity & Organization</p>
+                            </div>
+                            <div class="skill-card">
+                                <h3>J u p y t e r L a b</h3>
+                                <p>Data Science Environment</p>
+                            </div>
+                            <div class="skill-card">
+                                <h3>M i c r o s o f t O f f i c e</h3>
+                                <p>Office Productivity Suite</p>
+                            </div>
+                            <div class="skill-card">
+                                <h3>G r a p h i c D e s i g n</h3>
+                                <p>Canva, Desygner, VistaCreate</p>
+                            </div>
+                            <div class="skill-card">
+                                <h3>A g i l e & S c r u m</h3>
+                                <p>Project Management Methodologies</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Page -->
+        <div id="projects-page" class="page">
+            <nav class="navbar">
+                <div class="nav-container">
+                    <img src="logo.svg" alt="TC Logo" class="nav-logo" onclick="goToBrowse()" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="fallback-logo" onclick="goToBrowse()" style="display:none; width:50px; height:50px; background:#e50914; border-radius:50%; color:white; font-size:1.2rem; justify-content:center; align-items:center; font-weight:bold; cursor:pointer;">TC</div>
+                    <ul class="nav-menu">
+                        <li><a href="#" onclick="showPage('profile-page')">Home</a></li>
+                        <li><a href="#" onclick="showPage('experience-page')">Professional</a></li>
+                        <li><a href="#" onclick="showPage('skills-page')">Skills</a></li>
+                        <li><a href="#" onclick="showPage('projects-page')" class="active">Projects</a></li>
+                        <li><a href="#" onclick="showPage('contact-page')">Hire Me</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="page-content">
+                <div class="projects-container">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>AI with Python Course Projects</h3>
+                            <p>Explored basic AI techniques like search algorithms, logic, and machine learning through comprehensive hands-on projects and implementations.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Jupyter Notebook</span>
+                                <span class="tech-tag">Machine Learning</span>
+                            </div>
+                            <div class="project-link">CS50 AI Certificate – 2024</div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Portfolio Website (Work in Progress)</h3>
+                            <p>A personal developer portfolio built with modern web technologies, featuring responsive design and interactive components to showcase skills and projects.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">Next.js</span>
+                                <span class="tech-tag">Tailwind CSS</span>
+                            </div>
+                            <div class="project-link">GitHub Link: To be added</div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-thermometer-half"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>IoT Project with Arduino</h3>
+                            <p>Built a basic temperature-monitoring system using sensors and Arduino IDE, demonstrating understanding of embedded systems and IoT principles.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Arduino IDE (C/C++)</span>
+                                <span class="tech-tag">Sensors</span>
+                                <span class="tech-tag">IoT</span>
+                            </div>
+                            <div class="project-link">Hardware Integration Project</div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Network Simulation Projects</h3>
+                            <p>Designed and implemented various network topologies using Cisco Packet Tracer, focusing on routing protocols, VLANs, and network security configurations.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Cisco Packet Tracer</span>
+                                <span class="tech-tag">Network Design</span>
+                                <span class="tech-tag">Routing Protocols</span>
+                            </div>
+                            <div class="project-link">University Coursework</div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Cybersecurity Research Projects</h3>
+                            <p>Ongoing research and practical implementations in cybersecurity, focusing on network security, penetration testing methodologies, and security analysis.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Security Analysis</span>
+                                <span class="tech-tag">Network Security</span>
+                                <span class="tech-tag">Research</span>
+                            </div>
+                            <div class="project-link">Academic Research</div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Database Management Projects</h3>
+                            <p>Developed various database solutions using PostgreSQL and MySQL, implementing complex queries and database optimization techniques for academic and personal projects.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">SQL Queries</span>
+                            </div>
+                            <div class="project-link">Database Design & Implementation</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Page -->
+        <div id="contact-page" class="page">
+            <nav class="navbar">
+                <div class="nav-container">
+                    <img src="logo.svg" alt="TC Logo" class="nav-logo" onclick="goToBrowse()" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="fallback-logo" onclick="goToBrowse()" style="display:none; width:50px; height:50px; background:#e50914; border-radius:50%; color:white; font-size:1.2rem; justify-content:center; align-items:center; font-weight:bold; cursor:pointer;">TC</div>
+                    <ul class="nav-menu">
+                        <li><a href="#" onclick="showPage('profile-page')">Home</a></li>
+                        <li><a href="#" onclick="showPage('experience-page')">Professional</a></li>
+                        <li><a href="#" onclick="showPage('skills-page')">Skills</a></li>
+                        <li><a href="#" onclick="showPage('projects-page')">Projects</a></li>
+                        <li><a href="#" onclick="showPage('contact-page')" class="active">Hire Me</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="page-content">
+                <div class="contact-container">
+                    <h1 class="page-title">Let's Connect! 📞</h1>
+                    
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p>faffynaomi@gmail.com</p>
+                                <a href="mailto:faffynaomi@gmail.com" class="contact-link">Send Email</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>LinkedIn</h3>
+                                <p>Tafara Chitiyo</p>
+                                <a href="https://linkedin.com/in/tafara-chitiyo" target="_blank" class="contact-link">Connect</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Phone</h3>
+                                <p>+263 78 601 8957</p>
+                                <a href="tel:+263786018957" class="contact-link">Call</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Location</h3>
+                                <p>4 Alvord Road, Mt Pleasant<br>Harare, Zimbabwe</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="education-section">
+                        <h2>Education & Certifications</h2>
+                        <div class="education-grid">
+                            <div class="education-card">
+                                <h3>BSc Honours in Computer Science</h3>
+                                <p>University of Zimbabwe (2023 – 2027)</p>
+                            </div>
+                            <div class="education-card">
+                                <h3>CS50's Introduction to AI with Python</h3>
+                                <p>HarvardX – 2024</p>
+                            </div>
+                            <div class="education-card">
+                                <h3>Scrum Fundamentals Certified</h3>
+                                <p>SCRUMStudy – 2024</p>
+                            </div>
+                            <div class="education-card">
+                                <h3>Advanced Level - 12 Points</h3>
+                                <p>Monte Cassino Girls High School (2022)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="references-section">
+                        <h2>References</h2>
+                        <div class="reference-card">
+                            <h3>Ms. S. Mungwena</h3>
+                            <p>Human Resources Manager<br>
+                            Messenger of Court, Marondera</p>
+                            <div class="reference-contact">
+                                <p><i class="fas fa-phone"></i> +263 77 292 4539</p>
+                                <p><i class="fas fa-envelope"></i> mercyjrusike@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

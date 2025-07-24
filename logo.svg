@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E50914;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B20710;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F0F0F0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background Circle with subtle shadow -->
+  <circle cx="62" cy="62" r="58" fill="rgba(0,0,0,0.2)"/>
+  <circle cx="60" cy="60" r="58" fill="url(#bgGradient)"/>
+  
+  <!-- Inner decorative ring -->
+  <circle cx="60" cy="60" r="50" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  
+  <!-- T Letter - More elegant design -->
+  <rect x="25" y="25" width="70" height="10" rx="2" fill="url(#textGradient)"/>
+  <rect x="55" y="25" width="10" height="60" rx="2" fill="url(#textGradient)"/>
+  
+  <!-- C Letter - Modern curved design -->
+  <path d="M35 45 C30 45 25 50 25 60 C25 70 30 75 35 75 L70 75 C75 75 80 70 80 60 L80 55" 
+        fill="none" stroke="url(#textGradient)" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Cybersecurity themed decorative elements -->
+  <circle cx="30" cy="90" r="2" fill="rgba(255,255,255,0.7)"/>
+  <circle cx="42" cy="93" r="1.5" fill="rgba(255,255,255,0.5)"/>
+  <circle cx="78" cy="93" r="1.5" fill="rgba(255,255,255,0.5)"/>
+  <circle cx="90" cy="90" r="2" fill="rgba(255,255,255,0.7)"/>
+  
+  <!-- Network/Security icon elements -->
+  <rect x="38" y="88" width="2" height="6" fill="rgba(255,255,255,0.4)"/>
+  <rect x="80" y="88" width="2" height="6" fill="rgba(255,255,255,0.4)"/>
+  
+  <!-- Subtle tech pattern -->
+  <rect x="15" y="15" width="90" height="1" fill="rgba(255,255,255,0.1)"/>
+  <rect x="15" y="104" width="90" height="1" fill="rgba(255,255,255,0.1)"/>
+</svg>
