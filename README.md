@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Tafara Chitiyo - Netflix-Style Portfolio
 
 A modern, responsive portfolio website inspired by Netflix's UI/UX design, showcasing skills in Network & Cybersecurity, Programming, and System Administration.
@@ -163,3 +164,6 @@ live-server
 
 **Built with ❤️ by Tafara Chitiyo**
 *Network & Cybersecurity Specialist | Computer Science Student*
+=======
+# my-portfolio
+>>>>>>> 6ef75165f484b6b4bc66afeec0c93c1fb49ff758
