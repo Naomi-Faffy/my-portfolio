@@ -695,7 +695,7 @@ document.addEventListener('DOMContentLoaded', function() {
         createDigitalRain();
         addButtonGlitchEffects();
         addMobileTouchEffects();
-    }, 2500); // After loading screen
+    }, 2500); // After loading screen with name animation
 });
 
 // Console easter egg with neon ASCII art
@@ -719,9 +719,10 @@ console.log(`
 🎯 Specializing in Network & Cybersecurity
 
 This portfolio features:
-✨ Neon-style animations
+✨ Your name in neon lights on loading screen
+🧱 Realistic neon sign on brick wall
 🎨 Cyberpunk-inspired design  
-⚡ Interactive effects
+⚡ Interactive click effects on your name
 📱 Touch-optimized interface
 🔥 Modern web technologies
 

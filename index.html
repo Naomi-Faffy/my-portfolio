@@ -11,9 +11,23 @@
 <body>
     <!-- Loading Screen -->
     <div id="loading-screen" class="loading-screen">
-        <div class="logo-container">
-            <img src="logo.svg" alt="TC Logo" class="loading-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="fallback-logo" style="display:none; width:120px; height:120px; background:#e50914; border-radius:50%; color:white; font-size:3rem; justify-content:center; align-items:center; font-weight:bold;">TC</div>
+        <div class="loading-name-container">
+            <div class="loading-full-name">
+                <span class="loading-letter">T</span>
+                <span class="loading-letter">A</span>
+                <span class="loading-letter">F</span>
+                <span class="loading-letter">A</span>
+                <span class="loading-letter">R</span>
+                <span class="loading-letter">A</span>
+                <span class="loading-space"> </span>
+                <span class="loading-letter">C</span>
+                <span class="loading-letter">H</span>
+                <span class="loading-letter">I</span>
+                <span class="loading-letter">T</span>
+                <span class="loading-letter">I</span>
+                <span class="loading-letter">Y</span>
+                <span class="loading-letter">O</span>
+            </div>
         </div>
     </div>
 
@@ -33,81 +47,33 @@
                         <span></span>
                         <span></span>
                         <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
                 </div>
                 
-                <!-- Main neon sign display -->
-                <div class="neon-sign-container">
-                    <div class="brick-wall-background"></div>
-                    <div class="neon-sign-board">
-                        <div class="neon-sign-wrapper">
-                            <div class="neon-sign-text">
-                                <span class="neon-word first-name">TAFARA</span>
-                                <span class="neon-word last-name">CHITIYO</span>
+                <!-- Simple browse page like Netflix -->
+                <div class="browse-container">
+                    <h1 class="browse-title">Who's Watching?</h1>
+                    
+                    <div class="profiles-list">
+                        <div class="profile-item" onclick="showPage('recruiter')">
+                            <div class="profile-pic">
+                                <img src="purple.jpg" alt="Recruiter Profile">
                             </div>
-                            <div class="neon-sign-subtitle">
-                                <span class="neon-sub-text">NETWORK & CYBERSECURITY</span>
-                                <span class="neon-sub-text">SPECIALIST</span>
-                            </div>
+                            <h3 class="profile-label">recruiter</h3>
                         </div>
-                        <!-- Neon sign mounting brackets -->
-                        <div class="sign-bracket bracket-left"></div>
-                        <div class="sign-bracket bracket-right"></div>
-                        <div class="sign-bracket bracket-top-left"></div>
-                        <div class="sign-bracket bracket-top-right"></div>
                         
-                        <!-- Power cable -->
-                        <div class="power-cable"></div>
-                    </div>
-                </div>
-                
-                <!-- Interactive entrance options -->
-                <div class="entrance-options">
-                    <div class="entrance-title">Choose Your Experience</div>
-                    <div class="neon-buttons-grid">
-                        <button class="neon-button recruiter-btn" data-profile="recruiter">
-                            <div class="button-icon">
-                                <i class="fas fa-briefcase"></i>
+                        <div class="profile-item" onclick="showPage('cybersecurity')">
+                            <div class="profile-pic">
+                                <img src="pink.jpg" alt="Adventurer Profile">
                             </div>
-                            <div class="button-text">
-                                <span class="button-title">Professional</span>
-                                <span class="button-subtitle">Recruiter View</span>
-                            </div>
-                            <div class="neon-border"></div>
-                        </button>
-                        
-                        <button class="neon-button developer-btn" data-profile="developer">
-                            <div class="button-icon">
-                                <i class="fas fa-code"></i>
-                            </div>
-                            <div class="button-text">
-                                <span class="button-title">Technical</span>
-                                <span class="button-subtitle">Developer View</span>
-                            </div>
-                            <div class="neon-border"></div>
-                        </button>
-                        
-                        <button class="neon-button cybersecurity-btn" data-profile="cybersecurity">
-                            <div class="button-icon">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <div class="button-text">
-                                <span class="button-title">Security</span>
-                                <span class="button-subtitle">Cybersecurity View</span>
-                            </div>
-                            <div class="neon-border"></div>
-                        </button>
-                        
-                        <button class="neon-button student-btn" data-profile="student">
-                            <div class="button-icon">
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
-                            <div class="button-text">
-                                <span class="button-title">Academic</span>
-                                <span class="button-subtitle">Student View</span>
-                            </div>
-                            <div class="neon-border"></div>
-                        </button>
+                            <h3 class="profile-label">adventurer</h3>
+                        </div>
                     </div>
                 </div>
                 
