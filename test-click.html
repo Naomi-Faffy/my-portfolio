@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Click Test</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 50px;
+            background: #000;
+            color: #fff;
+        }
+        .test-button { 
+            padding: 20px; 
+            background: #e50914; 
+            color: white; 
+            border: none; 
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            margin: 10px;
+        }
+        .test-button:hover {
+            background: #f40612;
+        }
+    </style>
+</head>
+<body>
+    <h1>Click Test Page</h1>
+    <p>This is a simple test to verify that JavaScript clicks work in your browser.</p>
+    
+    <button class="test-button" onclick="alert('Button clicked!')">Test Alert</button>
+    <button class="test-button" onclick="console.log('Console test'); document.getElementById('result').innerHTML = 'Console log worked!'">Test Console</button>
+    
+    <div id="result" style="margin-top: 20px; padding: 20px; background: #333;"></div>
+    
+    <hr>
+    
+    <h2>Profile Test</h2>
+    <div style="display: flex; gap: 20px;">
+        <div onclick="alert('Profile 1 clicked')" style="padding: 20px; background: #9d4edd; border-radius: 8px; cursor: pointer;">
+            <h3>Profile 1</h3>
+        </div>
+        <div onclick="alert('Profile 2 clicked')" style="padding: 20px; background: #ff006e; border-radius: 8px; cursor: pointer;">
+            <h3>Profile 2</h3>
+        </div>
+    </div>
+</body>
+</html>

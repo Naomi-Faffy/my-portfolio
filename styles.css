@@ -42,6 +42,7 @@ body {
 .loading-full-name {
     display: block;
     white-space: nowrap;
+    margin-top: 8rem;
 }
 
 .loading-letter {
@@ -213,6 +214,8 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
+    z-index: 1;
+    pointer-events: none;
 }
 
 .floating-particles span {
@@ -308,6 +311,127 @@ body {
     top: 30%;
     left: 40%;
     animation-delay: 5s;
+}
+
+/* Additional smaller floating particles for blending */
+.floating-particles span:nth-child(13) {
+    top: 22%;
+    left: 35%;
+    width: 4px;
+    height: 4px;
+    animation-delay: -0.5s;
+    background: #ff006e;
+    box-shadow: 0 0 10px #ff006e, 0 0 20px #ff006e;
+}
+
+.floating-particles span:nth-child(14) {
+    top: 45%;
+    left: 90%;
+    width: 6px;
+    height: 6px;
+    animation-delay: -7s;
+    background: #c77dff;
+    box-shadow: 0 0 12px #c77dff, 0 0 24px #c77dff;
+}
+
+.floating-particles span:nth-child(15) {
+    top: 55%;
+    left: 5%;
+    width: 3px;
+    height: 3px;
+    animation-delay: -1.8s;
+    background: #e0aaff;
+    box-shadow: 0 0 8px #e0aaff, 0 0 16px #e0aaff;
+}
+
+.floating-particles span:nth-child(16) {
+    top: 8%;
+    left: 45%;
+    width: 10px;
+    height: 10px;
+    animation-delay: -3.2s;
+    background: #9d4edd;
+    box-shadow: 0 0 18px #9d4edd, 0 0 36px #9d4edd;
+}
+
+.floating-particles span:nth-child(17) {
+    top: 78%;
+    left: 30%;
+    width: 5px;
+    height: 5px;
+    animation-delay: -4.7s;
+    background: #ff006e;
+    box-shadow: 0 0 12px #ff006e, 0 0 24px #ff006e;
+}
+
+.floating-particles span:nth-child(18) {
+    top: 25%;
+    left: 65%;
+    width: 4px;
+    height: 4px;
+    animation-delay: -6.3s;
+    background: #7209b7;
+    box-shadow: 0 0 10px #7209b7, 0 0 20px #7209b7;
+}
+
+.floating-particles span:nth-child(19) {
+    top: 92%;
+    left: 50%;
+    width: 7px;
+    height: 7px;
+    animation-delay: -2.1s;
+    background: #c77dff;
+    box-shadow: 0 0 14px #c77dff, 0 0 28px #c77dff;
+}
+
+.floating-particles span:nth-child(20) {
+    top: 18%;
+    left: 85%;
+    width: 3px;
+    height: 3px;
+    animation-delay: -5.4s;
+    background: #e0aaff;
+    box-shadow: 0 0 8px #e0aaff, 0 0 16px #e0aaff;
+}
+
+.floating-particles span:nth-child(21) {
+    top: 48%;
+    left: 12%;
+    width: 6px;
+    height: 6px;
+    animation-delay: -8.1s;
+    background: #9d4edd;
+    box-shadow: 0 0 12px #9d4edd, 0 0 24px #9d4edd;
+}
+
+.floating-particles span:nth-child(22) {
+    top: 62%;
+    left: 72%;
+    width: 4px;
+    height: 4px;
+    animation-delay: -3.9s;
+    background: #ff006e;
+    box-shadow: 0 0 10px #ff006e, 0 0 20px #ff006e;
+}
+
+.floating-particles span:nth-child(23) {
+    top: 5%;
+    left: 28%;
+    width: 8px;
+    height: 8px;
+    animation-delay: -7.6s;
+    background: #c77dff;
+    box-shadow: 0 0 16px #c77dff, 0 0 32px #c77dff;
+}
+
+.floating-particles span:nth-child(24) {
+    top: 88%;
+    left: 8%;
+    width: 5px;
+    height: 5px;
+    animation-delay: -4.4s;
+    background: #7209b7;
+    box-shadow: 0 0 12px #7209b7, 0 0 24px #7209b7;
 }
 
 @keyframes float {
@@ -735,10 +859,7 @@ body {
     }
 }
 
-/* Legacy Styles for Backward Compatibility */
-.browse-container {
-    display: none;
-}
+/* Legacy Styles for Backward Compatibility - removed conflicting browse-container rule */
 
 .main-logo {
     width: 100px;
@@ -763,6 +884,8 @@ body {
     min-height: 100vh;
     padding: 2rem;
     text-align: center;
+    position: relative;
+    z-index: 100;
 }
 
 .browse-title {
@@ -771,6 +894,65 @@ body {
     margin-bottom: 3rem;
     color: #ffffff;
     font-family: 'Arial', sans-serif;
+}
+
+/* Curved Neon Name for Loading Screen */
+.curved-neon-name {
+    font-size: 6rem;
+    font-weight: 900;
+    color: #ffffff;
+    font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) perspective(800px) rotateX(-8deg) translateZ(50px);
+    transform-origin: center center;
+    text-shadow: 
+        0 0 15px #9d4edd,
+        0 0 30px #9d4edd,
+        0 0 45px #9d4edd,
+        0 0 60px #9d4edd,
+        0 0 75px #9d4edd;
+    letter-spacing: 0.12em;
+    animation: curvedNameGlow 3s ease-in-out infinite alternate;
+    z-index: 1000;
+    opacity: 1;
+    animation: nameAppear 4s ease-out forwards, curvedNameGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes curvedNameGlow {
+    from {
+        text-shadow: 
+            0 0 15px #9d4edd,
+            0 0 30px #9d4edd,
+            0 0 45px #9d4edd,
+            0 0 60px #9d4edd,
+            0 0 75px #9d4edd;
+    }
+    to {
+        text-shadow: 
+            0 0 25px #9d4edd,
+            0 0 40px #9d4edd,
+            0 0 55px #9d4edd,
+            0 0 70px #9d4edd,
+            0 0 90px #9d4edd;
+    }
+}
+
+@keyframes nameAppear {
+    0% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(-50%) perspective(800px) rotateX(-8deg) translateZ(50px) scale(1);
+    }
+    40% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(-50%) perspective(800px) rotateX(-8deg) translateZ(50px) scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(-50%) perspective(800px) rotateX(-8deg) translateZ(50px) scale(1);
+    }
 }
 
 .profiles-list {
@@ -787,10 +969,47 @@ body {
     align-items: center;
     cursor: pointer;
     transition: transform 0.3s ease;
+    position: relative;
+    z-index: 101;
+    pointer-events: auto;
 }
 
 .profile-item:hover {
     transform: scale(1.1);
+}
+
+/* Purple glow for recruiter profile */
+.recruiter-profile .profile-pic {
+    box-shadow: 
+        0 0 20px #9d4edd,
+        0 0 40px #9d4edd,
+        0 0 60px #9d4edd;
+    border: 3px solid #9d4edd;
+}
+
+.recruiter-profile:hover .profile-pic {
+    box-shadow: 
+        0 0 30px #9d4edd,
+        0 0 50px #9d4edd,
+        0 0 80px #9d4edd;
+    border: 3px solid #c77dff;
+}
+
+/* Pink glow for adventurer profile */
+.adventurer-profile .profile-pic {
+    box-shadow: 
+        0 0 20px #ff006e,
+        0 0 40px #ff006e,
+        0 0 60px #ff006e;
+    border: 3px solid #ff006e;
+}
+
+.adventurer-profile:hover .profile-pic {
+    box-shadow: 
+        0 0 30px #ff006e,
+        0 0 50px #ff006e,
+        0 0 80px #ff006e;
+    border: 3px solid #ff4081;
 }
 
 .profile-pic {
@@ -799,6 +1018,7 @@ body {
     border-radius: 8px;
     overflow: hidden;
     margin-bottom: 1rem;
+    transition: all 0.3s ease;
     position: relative;
 }
 

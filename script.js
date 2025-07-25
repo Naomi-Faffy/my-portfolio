@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function init() {
-    // Hide loading screen after 2 seconds
+    // Hide loading screen after name animation completes
     setTimeout(() => {
         const loadingScreen = document.getElementById('loading-screen');
         const mainContent = document.getElementById('main-content');
@@ -16,7 +16,7 @@ function init() {
             loadingScreen.style.display = 'none';
             mainContent.classList.remove('hidden');
         }, 500);
-    }, 2000);
+    }, 4500);
 
     // Add event listeners
     setupEventListeners();
