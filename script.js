@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function init() {
+    // Setup custom cursor immediately  
+    addCustomCursor();
+    
     // Hide loading screen after name animation completes
     setTimeout(() => {
         const loadingScreen = document.getElementById('loading-screen');
@@ -24,6 +27,8 @@ function init() {
     // Setup navbar scroll effect
     setupNavbarScroll();
 }
+
+
 
 function setupEventListeners() {
     // Profile card clicks (legacy)
@@ -332,25 +337,12 @@ function handleSwipe() {
 
 // Add custom cursor effect (optional)
 function addCustomCursor() {
-    const cursor = document.createElement('div');
-    cursor.className = 'custom-cursor';
-    cursor.style.cssText = `
-        position: fixed;
-        width: 20px;
-        height: 20px;
-        background: #e50914;
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 9999;
-        mix-blend-mode: difference;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    `;
-    document.body.appendChild(cursor);
+    // Use the existing cursor element from HTML
+    const cursor = document.querySelector('.custom-cursor');
     
     document.addEventListener('mousemove', function(e) {
-        cursor.style.left = e.clientX - 10 + 'px';
-        cursor.style.top = e.clientY - 10 + 'px';
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
         cursor.style.opacity = '1';
     });
     
@@ -414,11 +406,11 @@ function setupNeonSignEffects() {
             setTimeout(() => {
                 this.style.animation = 'neonBuzz 3s infinite alternate';
                 this.style.textShadow = `
-                    0 0 5px #e50914,
-                    0 0 10px #e50914,
-                    0 0 20px #e50914,
-                    0 0 30px #e50914,
-                    0 0 40px #e50914`;
+                    0 0 5px #ff006e,
+                    0 0 10px #9d4edd,
+                    0 0 20px #ff006e,
+                    0 0 30px #9d4edd,
+                    0 0 40px #c77dff`;
                 this.style.opacity = '1';
             }, 300);
         });
@@ -524,7 +516,7 @@ function showPageWithNeonTransition(pageId) {
         left: 0;
         width: 100%;
         height: 100%;
-        background: radial-gradient(circle, rgba(229,9,20,0.3) 0%, transparent 70%);
+        background: radial-gradient(circle, rgba(255,0,110,0.3) 0%, transparent 70%);
         z-index: 9998;
         pointer-events: none;
         opacity: 0;
@@ -584,7 +576,7 @@ function createDigitalRain() {
         ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         
-        ctx.fillStyle = '#e50914';
+        ctx.fillStyle = '#ff006e';
         ctx.font = fontSize + 'px monospace';
         
         for (let i = 0; i < drops.length; i++) {
@@ -653,7 +645,7 @@ function addMobileTouchEffects() {
                 ripple.style.cssText = `
                     position: absolute;
                     border-radius: 50%;
-                    background: radial-gradient(circle, rgba(229,9,20,0.4) 0%, transparent 70%);
+                    background: radial-gradient(circle, rgba(255,0,110,0.4) 0%, transparent 70%);
                     transform: scale(0);
                     animation: ripple 0.6s linear;
                     pointer-events: none;
@@ -727,6 +719,6 @@ This portfolio features:
 🔥 Modern web technologies
 
 Thanks for exploring the code! 🔍`, 
-'color: #e50914; font-family: monospace; font-size: 8px;',
+'color: #ff006e; font-family: monospace; font-size: 8px;',
 'color: #00ff41; font-family: monospace; font-size: 12px;'
 );
