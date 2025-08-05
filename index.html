@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Netflix+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Preload the neon background image for instant loading -->
+    <link rel="preload" href="neon-square-bg.jpg" as="image">
 </head>
 <body>
     <!-- Custom Cursor -->
@@ -15,7 +17,10 @@
     <!-- Loading Screen -->
     <div id="loading-screen" class="loading-screen">
         <div class="loading-name-container">
-            <h1 class="curved-neon-name">TAFARA CHITIYO</h1>
+            <div class="curved-neon-name">
+                <div class="first-name">TAFARA</div>
+                <div class="surname">CHITIYO</div>
+            </div>
         </div>
     </div>
 
