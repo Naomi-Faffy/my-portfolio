@@ -53,7 +53,7 @@ body {
 /* Responsive design for the name - fits perfectly in inner box */
 @media screen and (max-width: 1200px) {
     .curved-neon-name {
-        max-width: 44vw;
+        max-width: 70vw;
     }
     .first-name, .surname {
         font-size: 3.6rem;
@@ -69,10 +69,11 @@ body {
 
 @media screen and (max-width: 768px) {
     .curved-neon-name {
-        max-width: 42vw;
+        max-width: 80vw;
+        transform: translateX(-50%) translateY(-50%) scale(0.85);
     }
     .first-name, .surname {
-        font-size: 2.8rem;
+        font-size: 3.2rem;
         letter-spacing: 0.1em;
         line-height: 1.1;
         text-shadow: 
@@ -85,10 +86,11 @@ body {
 
 @media screen and (max-width: 480px) {
     .curved-neon-name {
-        max-width: 40vw;
+        max-width: 90vw;
+        transform: translateX(-50%) translateY(-50%) scale(0.75);
     }
     .first-name, .surname {
-        font-size: 2.2rem;
+        font-size: 2.8rem;
         letter-spacing: 0.08em;
         line-height: 1.05;
         text-shadow: 
@@ -101,10 +103,11 @@ body {
 
 @media screen and (max-width: 360px) {
     .curved-neon-name {
-        max-width: 38vw;
+        max-width: 95vw;
+        transform: translateX(-50%) translateY(-50%) scale(0.65);
     }
     .first-name, .surname {
-        font-size: 1.8rem;
+        font-size: 2.4rem;
         letter-spacing: 0.06em;
         line-height: 1.0;
         text-shadow: 
