@@ -50,73 +50,7 @@ body {
     z-index: 10000;
 }
 
-/* Responsive design for the name - fits perfectly in inner box */
-@media screen and (max-width: 1200px) {
-    .curved-neon-name {
-        max-width: 70vw;
-    }
-    .first-name, .surname {
-        font-size: 3.6rem;
-        letter-spacing: 0.11em;
-        line-height: 1.15;
-        text-shadow: 
-            0 0 18px rgba(255, 255, 255, 0.9),
-            0 0 36px rgba(255, 255, 255, 0.7),
-            0 0 54px rgba(255, 255, 255, 0.5),
-            2px 2px 6px rgba(255, 255, 255, 0.3);
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .curved-neon-name {
-        max-width: 80vw;
-        transform: translateX(-50%) translateY(-50%) scale(0.85);
-    }
-    .first-name, .surname {
-        font-size: 3.2rem;
-        letter-spacing: 0.1em;
-        line-height: 1.1;
-        text-shadow: 
-            0 0 15px rgba(255, 255, 255, 0.9),
-            0 0 30px rgba(255, 255, 255, 0.7),
-            0 0 45px rgba(255, 255, 255, 0.5),
-            2px 2px 5px rgba(255, 255, 255, 0.3);
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .curved-neon-name {
-        max-width: 90vw;
-        transform: translateX(-50%) translateY(-50%) scale(0.75);
-    }
-    .first-name, .surname {
-        font-size: 2.8rem;
-        letter-spacing: 0.08em;
-        line-height: 1.05;
-        text-shadow: 
-            0 0 12px rgba(255, 255, 255, 0.9),
-            0 0 24px rgba(255, 255, 255, 0.7),
-            0 0 36px rgba(255, 255, 255, 0.5),
-            1px 1px 4px rgba(255, 255, 255, 0.3);
-    }
-}
-
-@media screen and (max-width: 360px) {
-    .curved-neon-name {
-        max-width: 95vw;
-        transform: translateX(-50%) translateY(-50%) scale(0.65);
-    }
-    .first-name, .surname {
-        font-size: 2.4rem;
-        letter-spacing: 0.06em;
-        line-height: 1.0;
-        text-shadow: 
-            0 0 10px rgba(255, 255, 255, 0.9),
-            0 0 20px rgba(255, 255, 255, 0.7),
-            0 0 30px rgba(255, 255, 255, 0.5),
-            1px 1px 3px rgba(255, 255, 255, 0.3);
-    }
-}
+/* Old duplicate responsive rules removed - now handled after main definition */
 
 .loading-screen.fade-out {
     opacity: 0;
@@ -1021,6 +955,43 @@ body {
     opacity: 1;
     text-align: center;
     max-width: 45vw;
+}
+
+/* Mobile responsive overrides */
+@media screen and (max-width: 768px) {
+    .curved-neon-name {
+        max-width: 85vw !important;
+        transform: translateX(-50%) translateY(-50%) scale(0.8) !important;
+    }
+    .first-name, .surname {
+        font-size: 3.2rem !important;
+        white-space: normal !important;
+        line-height: 1.1 !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .curved-neon-name {
+        max-width: 90vw !important;
+        transform: translateX(-50%) translateY(-50%) scale(0.7) !important;
+    }
+    .first-name, .surname {
+        font-size: 2.8rem !important;
+        white-space: normal !important;
+        line-height: 1.0 !important;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .curved-neon-name {
+        max-width: 95vw !important;
+        transform: translateX(-50%) translateY(-50%) scale(0.6) !important;
+    }
+    .first-name, .surname {
+        font-size: 2.4rem !important;
+        white-space: normal !important;
+        line-height: 0.9 !important;
+    }
 }
 
 .first-name, .surname {
