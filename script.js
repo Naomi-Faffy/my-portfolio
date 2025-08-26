@@ -331,8 +331,9 @@ function handleSwipe() {
 
 // Add custom cursor effect (optional)
 function addCustomCursor() {
-    // Desktop only; guard against duplicate init
-    if (window.innerWidth <= 768 || window.__customCursorInit) return;
+    // Desktop only; guard against duplicate init and touch/pointer coarse
+    const isCoarse = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
+    if (window.innerWidth <= 768 || isCoarse || window.__customCursorInit) return;
     window.__customCursorInit = true;
 
     // Inject styles once
@@ -351,11 +352,13 @@ function addCustomCursor() {
                 border-radius: 50%;
                 pointer-events: none;
                 transform: translate(-50%, -50%);
-                transition: opacity 0.2s ease;
+                transition: opacity 0.2s ease, transform 0.15s ease;
                 mix-blend-mode: difference;
                 z-index: 10000;
                 opacity: 0;
             }
+            .custom-cursor.is-hovering { transform: translate(-50%, -50%) scale(1.8); }
+            .custom-cursor.is-clicking { transform: translate(-50%, -50%) scale(0.9); }
         `;
         document.head.appendChild(style);
     }
@@ -380,6 +383,37 @@ function addCustomCursor() {
 
     document.addEventListener('mouseleave', function() {
         cursor.style.opacity = '0';
+    });
+
+    // Hover grow on interactive elements via delegation
+    const interactiveSelector = 'a, button, .profile-item, .pick-card, .continue-card, .nav-menu a, .pick-image, .continue-image';
+    document.addEventListener('mouseover', function(e) {
+        if (e.target.closest(interactiveSelector)) cursor.classList.add('is-hovering');
+    });
+    document.addEventListener('mouseout', function(e) {
+        if (e.target.closest(interactiveSelector)) cursor.classList.remove('is-hovering');
+    });
+
+    // Click feedback
+    document.addEventListener('mousedown', function() {
+        cursor.classList.add('is-clicking');
+    });
+    document.addEventListener('mouseup', function() {
+        cursor.classList.remove('is-clicking');
+    });
+
+    // Temporarily restore native cursor on input focus
+    const formSelector = 'input, textarea, select, [contenteditable="true"]';
+    document.addEventListener('focusin', function(e) {
+        if (e.target.matches(formSelector)) {
+            document.body.classList.remove('custom-cursor-enabled');
+            cursor.style.opacity = '0';
+        }
+    });
+    document.addEventListener('focusout', function(e) {
+        if (e.target.matches(formSelector)) {
+            document.body.classList.add('custom-cursor-enabled');
+        }
     });
 }
 
