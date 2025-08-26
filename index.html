@@ -23,9 +23,9 @@
     .bg {
       position: fixed;
       inset: 0;
-      background: radial-gradient(1200px 1200px at 15% 25%, rgba(255,145,0,0.4), transparent 60%),
-                  radial-gradient(1100px 900px at 85% 85%, rgba(255,110,0,0.25), transparent 65%),
-                  radial-gradient(900px 900px at 50% 50%, rgba(255,120,40,0.18), rgba(0,0,0,0.9) 70%);
+      background: radial-gradient(1200px 1200px at 15% 25%, rgba(224, 170, 255, 0.4), transparent 60%),
+                  radial-gradient(1100px 900px at 85% 85%, rgba(255, 110, 199, 0.25), transparent 65%),
+                  radial-gradient(900px 900px at 50% 50%, rgba(180, 120, 255, 0.18), rgba(0,0,0,0.9) 70%);
       filter: saturate(105%) contrast(105%);
       z-index: 0;
     }
@@ -127,7 +127,7 @@
 
     /* Right barcode column - continuous vertical bars */
     .barcode {
-      position: absolute; right: 4.5%; top: 10%; bottom: 10%; width: clamp(28px, 3vmin, 36px);
+      position: absolute; right: 6%; top: 10%; bottom: 10%; width: clamp(28px, 3vmin, 36px);
       display: flex; align-items: stretch; gap: 2px; /* tight gaps like a barcode */
       opacity: 0.98;
       filter: drop-shadow(0 1px 0 rgba(255,255,255,0.45)) drop-shadow(0 6px 14px rgba(0,0,0,0.35));
