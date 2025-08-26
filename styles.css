@@ -1,6 +1,4 @@
 /* Netflix-style Portfolio CSS */
-/* Hide any emergency fallback red logo */
-.fallback-logo { display: none !important; }
 
 /* Reset and Base Styles */
 * {
@@ -14,79 +12,6 @@ body {
     background-color: #141414;
     color: #ffffff;
     overflow-x: hidden;
-}
-
-/* Recruiter theme: purple/black/white gradient with glassmorphism */
-body.theme-recruiter {
-    background: radial-gradient(1000px 800px at 15% 20%, rgba(157, 78, 221, 0.18), transparent 60%),
-                radial-gradient(900px 700px at 85% 80%, rgba(224, 170, 255, 0.12), transparent 65%),
-                linear-gradient(180deg, #0b0a10 0%, #121018 60%, #0b0a10 100%);
-}
-
-body.theme-recruiter .navbar {
-    background: rgba(18, 16, 24, 0.35);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-}
-
-body.theme-recruiter .section,
-body.theme-recruiter .page-content {
-    background: transparent;
-}
-
-/* Glass cards */
-body.theme-recruiter .pick-card,
-body.theme-recruiter .continue-card,
-body.theme-recruiter .skill-card,
-body.theme-recruiter .project-card,
-body.theme-recruiter .contact-card,
-body.theme-recruiter .timeline-item .timeline-content {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.10);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.06);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-}
-
-/* Minimalist spacing and cleaner grids for recruiter */
-body.theme-recruiter .picks-grid,
-body.theme-recruiter .continue-grid,
-body.theme-recruiter .skills-grid,
-body.theme-recruiter .projects-grid {
-    gap: 1.2rem;
-}
-
-/* Titles */
-body.theme-recruiter .page-title,
-body.theme-recruiter .section-title {
-    color: #ffffff;
-    text-shadow: 0 0 18px rgba(157, 78, 221, 0.3);
-}
-
-/* Accent icons */
-body.theme-recruiter .pick-image i,
-body.theme-recruiter .continue-image i,
-body.theme-recruiter .profile-avatar-large i {
-    color: #e0aaff;
-}
-
-/* Buttons */
-body.theme-recruiter .btn-primary {
-    background: linear-gradient(135deg, #9d4edd, #7b2cbf);
-    border: 1px solid rgba(255,255,255,0.15);
-}
-body.theme-recruiter .btn-secondary {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.12);
-}
-
-/* Minimal navbar spacing */
-body.theme-recruiter .nav-menu a {
-    color: #ffffff;
-}
-body.theme-recruiter .nav-menu a.active {
-    color: #e0aaff;
 }
 
 
@@ -288,7 +213,7 @@ body.theme-recruiter .nav-menu a.active {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background: #0b0a10;
+    background: #000000;
 }
 
 /* Animated Background */
@@ -1192,9 +1117,8 @@ body.theme-recruiter .nav-menu a.active {
     font-size: 1.5rem;
     font-weight: bold;
     color: #ffffff;
-    margin: 0.25rem 0 0;
+    margin: 0;
     text-transform: uppercase;
-    letter-spacing: 0.06em;
     font-family: 'Arial', sans-serif;
 }
 

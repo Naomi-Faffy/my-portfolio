@@ -88,14 +88,6 @@ function updateProfileView(profileType) {
             profileAvatarLarge.innerHTML = '<i class="fas fa-briefcase"></i>';
             profileType = 'recruiter';
     }
-
-    // Apply theme classes to body
-    document.body.classList.remove('theme-recruiter', 'theme-adventurer');
-    if (profileType === 'recruiter') {
-        document.body.classList.add('theme-recruiter');
-    } else if (profileType === 'cybersecurity') {
-        document.body.classList.add('theme-adventurer');
-    }
     
     // Update profile type text
     profileTypeSpans.forEach(span => {
@@ -544,11 +536,11 @@ function startNeonSignAnimation() {
             neonWords[0].style.transition = 'all 0.3s ease';
             neonWords[0].style.opacity = '1';
             neonWords[0].style.textShadow = `
-                0 0 5px #9d4edd,
-                0 0 10px #9d4edd,
-                0 0 20px #9d4edd,
-                0 0 30px #9d4edd,
-                0 0 40px #9d4edd`;
+                0 0 5px #e50914,
+                0 0 10px #e50914,
+                0 0 20px #e50914,
+                0 0 30px #e50914,
+                0 0 40px #e50914`;
         }, 500);
         
         // Second name lights up
@@ -556,11 +548,11 @@ function startNeonSignAnimation() {
             neonWords[1].style.transition = 'all 0.3s ease';
             neonWords[1].style.opacity = '1';
             neonWords[1].style.textShadow = `
-                0 0 5px #9d4edd,
-                0 0 10px #9d4edd,
-                0 0 20px #9d4edd,
-                0 0 30px #9d4edd,
-                0 0 40px #9d4edd`;
+                0 0 5px #e50914,
+                0 0 10px #e50914,
+                0 0 20px #e50914,
+                0 0 30px #e50914,
+                0 0 40px #e50914`;
         }, 1000);
         
         // Subtitle powers up
