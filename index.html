@@ -119,14 +119,18 @@
     .icon svg { width: 55%; height: 55%; opacity: 0.95; }
     .text { font-weight: 600; font-size: clamp(0.9rem, 2.2vw, 1.35rem); letter-spacing: 0.02em; color: #f4f6f8; text-decoration: none; }
 
-    /* Right barcode column */
+    /* Right barcode column - continuous vertical bars */
     .barcode {
-      position: absolute; right: 4.5%; top: 10%; bottom: 10%; width: clamp(18px, 2.4vmin, 28px);
-      display: grid; grid-auto-rows: 1fr; gap: clamp(6px, 1.2vmin, 10px);
-      opacity: 0.95;
+      position: absolute; right: 4.5%; top: 10%; bottom: 10%; width: clamp(28px, 3vmin, 36px);
+      display: flex; align-items: stretch; gap: 2px; /* tight gaps like a barcode */
+      opacity: 0.98;
       filter: drop-shadow(0 1px 0 rgba(255,255,255,0.45)) drop-shadow(0 6px 14px rgba(0,0,0,0.35));
     }
-    .bar { background: #ffffff; border-radius: 1px; }
+    .bar { flex: 1 0 auto; background: #fff; border-radius: 1px; height: 100%; }
+    .bar.thin { flex-basis: 2px; }
+    .bar.medium { flex-basis: 3px; }
+    .bar.thick { flex-basis: 4px; }
+    .bar.spacer { flex-basis: 1px; background: rgba(255,255,255,0.2); }
 
     /* CTA to enter the site */
     .cta {
@@ -191,19 +195,24 @@
           </div>
         </div>
 
-        <!-- Barcode column (simple stacked bars to match the visual) -->
+        <!-- Barcode column (continuous vertical bars) -->
         <div class="barcode" aria-hidden="true">
-          <div class="bar" style="height: 5%;"></div>
-          <div class="bar" style="height: 2%; opacity:.9"></div>
-          <div class="bar" style="height: 10%;"></div>
-          <div class="bar" style="height: 3%; opacity:.85"></div>
-          <div class="bar" style="height: 8%;"></div>
-          <div class="bar" style="height: 16%;"></div>
-          <div class="bar" style="height: 6%;"></div>
-          <div class="bar" style="height: 12%;"></div>
-          <div class="bar" style="height: 4%; opacity:.8"></div>
-          <div class="bar" style="height: 7%;"></div>
-          <div class="bar" style="height: 3%; opacity:.85"></div>
+          <div class="bar thin"></div>
+          <div class="bar thick"></div>
+          <div class="bar thin"></div>
+          <div class="bar medium"></div>
+          <div class="bar spacer"></div>
+          <div class="bar thick"></div>
+          <div class="bar medium"></div>
+          <div class="bar thin"></div>
+          <div class="bar thick"></div>
+          <div class="bar spacer"></div>
+          <div class="bar thin"></div>
+          <div class="bar medium"></div>
+          <div class="bar thick"></div>
+          <div class="bar thin"></div>
+          <div class="bar medium"></div>
+          <div class="bar thick"></div>
         </div>
 
         <!-- Enter site CTA -->
