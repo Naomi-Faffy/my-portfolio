@@ -2,174 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Tafara Chitiyo — Home</title>
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <title>Redirecting…</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <!-- Immediate redirect to the new Home page -->
+  <meta http-equiv="refresh" content="0; url=/my-portfolio/app.html">
+  <link rel="canonical" href="/my-portfolio/app.html">
+  <script>
+    // JS redirect as a fallback if meta refresh is blocked
+    (function(){
+      var target = '/my-portfolio/app.html';
+      if (location.pathname !== target) {
+        location.replace(target);
+      }
+    })();
+  </script>
   <style>
-    :root {
-      --bg-start: #9d4edd;  /* purple */
-      --bg-end: #0b0b0d;    /* near black */
-      --text: #f5f7fb;
-      --muted: #c7c9d1;
-      --glass: rgba(255, 255, 255, 0.08);
-      --glass-border: rgba(255, 255, 255, 0.18);
-      --accent: #b388ff;
-      --nav-height: 64px;
-    }
-
-    /* Reset */
-    *, *::before, *::after { box-sizing: border-box; }
-    html, body { height: 100%; }
-    body {
-      margin: 0;
-      color: var(--text);
-      background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans";
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      overflow-x: hidden;
-    }
-
-    /* Glassmorphism Navbar */
-    .nav {
-      position: fixed; top: 0; left: 0; right: 0; height: var(--nav-height);
-      display: flex; align-items: center; justify-content: center;
-      backdrop-filter: blur(10px) saturate(120%);
-      -webkit-backdrop-filter: blur(10px) saturate(120%);
-      background: linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.05));
-      border-bottom: 1px solid var(--glass-border);
-      z-index: 100;
-    }
-    .nav-inner { width: min(1100px, 92%); display: flex; align-items: center; justify-content: space-between; }
-    .brand {
-      font-family: "Plus Jakarta Sans", Inter, sans-serif;
-      font-weight: 800;
-      letter-spacing: 0.06em;
-      font-variant: small-caps;
-      color: #fff;
-      text-decoration: none;
-    }
-    .menu { display: flex; gap: 1.2rem; align-items: center; }
-    .menu a {
-      font-family: "Plus Jakarta Sans", Inter, sans-serif;
-      font-weight: 600;
-      color: var(--text);
-      text-decoration: none;
-      padding: 0.45rem 0.8rem;
-      border-radius: 10px;
-      border: 1px solid transparent;
-      transition: background .2s ease, border-color .2s ease, color .2s ease;
-    }
-    .menu a:hover { background: rgba(255,255,255,0.10); border-color: var(--glass-border); }
-    .menu a.active { background: rgba(255,255,255,0.16); border-color: rgba(255,255,255,0.28); color: #fff; }
-
-    /* Layout */
-    main { min-height: 100vh; display: grid; place-items: center; padding-top: var(--nav-height); }
-
-    /* Center card */
-    .card {
-      width: min(92%, 900px);
-      border-radius: 28px;
-      padding: clamp(2rem, 6vmin, 4rem);
-      text-align: center;
-      background: linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.06));
-      border: 1px solid var(--glass-border);
-      backdrop-filter: blur(14px) saturate(120%);
-      -webkit-backdrop-filter: blur(14px) saturate(120%);
-      box-shadow:
-        0 20px 50px rgba(0,0,0,0.45),
-        inset 0 1px 0 rgba(255,255,255,0.40);
-    }
-    .line-top {
-      font-family: "Plus Jakarta Sans", Inter, sans-serif;
-      font-weight: 700;
-      letter-spacing: 0.3em;
-      opacity: 0.9;
-      color: var(--muted);
-      margin-bottom: 1.2rem;
-    }
-    .line-middle {
-      font-family: "Plus Jakarta Sans", Inter, sans-serif;
-      font-weight: 800;
-      font-size: clamp(1.8rem, 6.5vw, 3.4rem);
-      letter-spacing: 0.03em;
-      color: #ffffff;
-      margin-bottom: 1.2rem;
-      white-space: nowrap;
-    }
-    .line-bottom {
-      font-family: "Plus Jakarta Sans", Inter, sans-serif;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      color: var(--muted);
-    }
-
-    /* Typing */
-    .cursor { display: inline-block; width: 1ch; color: #ffffff; animation: blink 1s steps(1) infinite; }
-    @keyframes blink { 50% { opacity: 0; } }
-
-    /* Footer spacing for mobile */
-    @media (max-width: 480px) { .menu { gap: 0.6rem; } }
+    html,body{height:100%}
+    body{margin:0;display:grid;place-items:center;font-family:Inter,system-ui,Segoe UI,Roboto,Arial}
+    .card{padding:1rem 1.25rem;border:1px solid #e5e7eb;border-radius:12px;color:#111}
+    a{color:#6d0fa7;text-decoration:none}
   </style>
 </head>
 <body>
-  <!-- Glass Navbar -->
-  <nav class="nav" role="navigation" aria-label="Main Navigation">
-    <div class="nav-inner">
-      <a class="brand" href="/my-portfolio/app.html">Tafara Chitiyo</a>
-      <div class="menu">
-        <a href="/my-portfolio/app.html" class="active">Home</a>
-        <a href="/my-portfolio/professional.html">Professional</a>
-        <a href="/my-portfolio/skills.html">Skills</a>
-        <a href="/my-portfolio/projects.html">Projects</a>
-        <a href="/my-portfolio/hire.html">Hire Me</a>
-      </div>
-    </div>
-  </nav>
-
-  <main>
-    <section class="card" aria-label="Status">
-      <div class="line-top">I'M A</div>
-      <div class="line-middle"><span id="typed"></span><span class="cursor">|</span></div>
-      <div class="line-bottom">UNDER CONSTRUCTION</div>
-    </section>
-  </main>
-
-  <script>
-    (function(){
-      const words = ["WEB DEVELOPER", "GRAPHIC DESIGNER", "NETWORK ARCHITECT"]; // phrases to loop
-      const el = document.getElementById('typed');
-      let wi = 0, ci = 0, typing = true;
-      const typeDelay = 75, holdDelay = 900, eraseDelay = 50, betweenDelay = 400;
-
-      function tick(){
-        const word = words[wi];
-        if (typing) {
-          el.textContent = word.slice(0, ci + 1);
-          ci++;
-          if (ci === word.length) {
-            typing = false;
-            setTimeout(tick, holdDelay);
-            return;
-          }
-          setTimeout(tick, typeDelay);
-        } else {
-          el.textContent = word.slice(0, ci - 1);
-          ci--;
-          if (ci === 0) {
-            typing = true;
-            wi = (wi + 1) % words.length;
-            setTimeout(tick, betweenDelay);
-            return;
-          }
-          setTimeout(tick, eraseDelay);
-        }
-      }
-      setTimeout(tick, 500);
-    })();
-  </script>
+  <div class="card">
+    Redirecting to the new Home… If you are not redirected, 
+    <a href="/my-portfolio/app.html">click here</a>.
+  </div>
 </body>
 </html>
