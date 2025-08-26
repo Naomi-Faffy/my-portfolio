@@ -88,6 +88,14 @@ function updateProfileView(profileType) {
             profileAvatarLarge.innerHTML = '<i class="fas fa-briefcase"></i>';
             profileType = 'recruiter';
     }
+
+    // Apply theme classes to body
+    document.body.classList.remove('theme-recruiter', 'theme-adventurer');
+    if (profileType === 'recruiter') {
+        document.body.classList.add('theme-recruiter');
+    } else if (profileType === 'cybersecurity') {
+        document.body.classList.add('theme-adventurer');
+    }
     
     // Update profile type text
     profileTypeSpans.forEach(span => {
