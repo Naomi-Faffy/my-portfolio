@@ -9,17 +9,11 @@ function init() {
     // Setup custom cursor immediately  
     addCustomCursor();
     
-    // Hide loading screen after name animation completes
-    setTimeout(() => {
-        const loadingScreen = document.getElementById('loading-screen');
-        const mainContent = document.getElementById('main-content');
-        
-        loadingScreen.classList.add('fade-out');
-        setTimeout(() => {
-            loadingScreen.style.display = 'none';
-            mainContent.classList.remove('hidden');
-        }, 500);
-    }, 4500);
+    // Show main content immediately (removed purple name screen)
+    const loadingScreen = document.getElementById('loading-screen');
+    const mainContent = document.getElementById('main-content');
+    if (loadingScreen) loadingScreen.style.display = 'none';
+    if (mainContent) mainContent.classList.remove('hidden');
 
     // Add event listeners
     setupEventListeners();
