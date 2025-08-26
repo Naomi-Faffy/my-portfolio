@@ -8,9 +8,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root{--bg-start:#9d4edd;--bg-end:#0b0b0d;--text:#f5f7fb;--muted:#c7c9d1;--glass:rgba(255,255,255,.08);--glass-border:rgba(255,255,255,.18);--nav-height:64px}
+    :root{--bg-start:#2a073b;--bg-mid:#0b0b0d;--bg-accent:#6d0fa7;--bg-pink:#ff6ad5;--text:#f5f7fb;--muted:#c7c9d1;--glass:rgba(255,255,255,.08);--glass-border:rgba(255,255,255,.18);--nav-height:64px}
     *,*:before,*:after{box-sizing:border-box}
-    body{margin:0;color:var(--text);background:linear-gradient(135deg,var(--bg-start),var(--bg-end));font-family:Inter,system-ui}
+    body{margin:0;color:var(--text);background:radial-gradient(1200px 700px at 20% 20%, rgba(255,106,213,0.25), transparent 40%), radial-gradient(1000px 600px at 80% 10%, rgba(109,15,167,0.25), transparent 45%), linear-gradient(145deg, var(--bg-start), var(--bg-mid) 55%, var(--bg-accent));font-family:Inter,system-ui}
     main{width:min(1100px,92%);margin:calc(var(--nav-height) + 24px) auto 48px}
     .nav{position:fixed;inset:0 0 auto 0;height:var(--nav-height);display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.05));backdrop-filter:blur(10px) saturate(120%);-webkit-backdrop-filter:blur(10px) saturate(120%);border-bottom:1px solid var(--glass-border);z-index:100}
     .nav-inner{width:min(1100px,92%);display:flex;align-items:center;justify-content:space-between}
