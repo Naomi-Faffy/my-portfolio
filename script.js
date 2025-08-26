@@ -331,15 +331,53 @@ function handleSwipe() {
 
 // Add custom cursor effect (optional)
 function addCustomCursor() {
-    // Use the existing cursor element from HTML
-    const cursor = document.querySelector('.custom-cursor');
-    
+    // Desktop only; guard against duplicate init
+    if (window.innerWidth <= 768 || window.__customCursorInit) return;
+    window.__customCursorInit = true;
+
+    // Inject styles once
+    if (!document.querySelector('style[data-custom-cursor]')) {
+        const style = document.createElement('style');
+        style.setAttribute('data-custom-cursor', 'true');
+        style.textContent = `
+            body.custom-cursor-enabled { cursor: none; }
+            .custom-cursor {
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 18px;
+                height: 18px;
+                border: 2px solid #e0aaff;
+                border-radius: 50%;
+                pointer-events: none;
+                transform: translate(-50%, -50%);
+                transition: opacity 0.2s ease;
+                mix-blend-mode: difference;
+                z-index: 10000;
+                opacity: 0;
+            }
+        `;
+        document.head.appendChild(style);
+    }
+
+    // Ensure cursor element exists
+    let cursor = document.querySelector('.custom-cursor');
+    if (!cursor) {
+        cursor = document.createElement('div');
+        cursor.className = 'custom-cursor';
+        document.body.appendChild(cursor);
+    }
+
+    // Hide default cursor and enable custom one
+    document.body.classList.add('custom-cursor-enabled');
+
+    // Track mouse
     document.addEventListener('mousemove', function(e) {
         cursor.style.left = e.clientX + 'px';
         cursor.style.top = e.clientY + 'px';
         cursor.style.opacity = '1';
     });
-    
+
     document.addEventListener('mouseleave', function() {
         cursor.style.opacity = '0';
     });
