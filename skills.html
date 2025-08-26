@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills — Tafara Chitiyo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg-start:#9d4edd;--bg-end:#0b0b0d;--text:#f5f7fb;--muted:#c7c9d1;--glass:rgba(255,255,255,.08);--glass-border:rgba(255,255,255,.18);--nav-height:64px}
+    *,*:before,*:after{box-sizing:border-box}
+    body{margin:0;color:var(--text);background:linear-gradient(135deg,var(--bg-start),var(--bg-end));font-family:Inter,system-ui}
+    main{width:min(1100px,92%);margin:calc(var(--nav-height) + 24px) auto 48px}
+    .nav{position:fixed;inset:0 0 auto 0;height:var(--nav-height);display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.05));backdrop-filter:blur(10px) saturate(120%);-webkit-backdrop-filter:blur(10px) saturate(120%);border-bottom:1px solid var(--glass-border);z-index:100}
+    .nav-inner{width:min(1100px,92%);display:flex;align-items:center;justify-content:space-between}
+    .brand{font-family:"Plus Jakarta Sans",Inter,sans-serif;font-weight:800;letter-spacing:.06em;font-variant:small-caps;color:#fff;text-decoration:none}
+    .menu{display:flex;gap:1.2rem}
+    .menu a{font-family:"Plus Jakarta Sans",Inter,sans-serif;font-weight:600;color:var(--text);text-decoration:none;padding:.45rem .8rem;border-radius:10px;border:1px solid transparent}
+    .menu a:hover{background:rgba(255,255,255,.10);border-color:var(--glass-border)}
+    .menu a.active{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.28);color:#fff}
+    .section{background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.06));border:1px solid var(--glass-border);border-radius:18px;padding:24px;margin:20px 0;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 18px 48px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.35)}
+    .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+    .card{background:rgba(255,255,255,.06);border:1px solid var(--glass-border);border-radius:14px;padding:16px}
+    h1,h2{font-family:"Plus Jakarta Sans"}
+  </style>
+</head>
+<body>
+  <nav class="nav" aria-label="Main Navigation">
+    <div class="nav-inner">
+      <a class="brand" href="/my-portfolio/app.html">Tafara Chitiyo</a>
+      <div class="menu">
+        <a href="/my-portfolio/app.html">Home</a>
+        <a href="/my-portfolio/professional.html">Professional</a>
+        <a class="active" href="/my-portfolio/skills.html">Skills</a>
+        <a href="/my-portfolio/projects.html">Projects</a>
+        <a href="/my-portfolio/hire.html">Hire Me</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <h1>Skills</h1>
+
+    <section class="section">
+      <h2>Frontend</h2>
+      <div class="grid">
+        <div class="card"><strong>HTML & CSS</strong><div>Web Markup and Styling</div></div>
+        <div class="card"><strong>JavaScript</strong><div>Programming Language</div></div>
+        <div class="card"><strong>TypeScript</strong><div>Type-safe JavaScript</div></div>
+        <div class="card"><strong>Tailwind CSS</strong><div>Utility-first CSS Framework</div></div>
+        <div class="card"><strong>Next.js</strong><div>React Framework</div></div>
+        <div class="card"><strong>WordPress</strong><div>CMS</div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Backend & Programming</h2>
+      <div class="grid">
+        <div class="card"><strong>Python</strong><div>Programming Language</div></div>
+        <div class="card"><strong>Java</strong><div>OOP</div></div>
+        <div class="card"><strong>Visual Basic</strong><div>Microsoft Programming</div></div>
+        <div class="card"><strong>Arduino (C/C++)</strong><div>Embedded Systems</div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Databases</h2>
+      <div class="grid">
+        <div class="card"><strong>PostgreSQL</strong><div>Relational Database</div></div>
+        <div class="card"><strong>MySQL</strong><div>Relational Database</div></div>
+        <div class="card"><strong>MongoDB</strong><div>NoSQL Database</div></div>
+        <div class="card"><strong>SQL Queries</strong><div>Database Management</div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Networking & Cybersecurity</h2>
+      <div class="grid">
+        <div class="card"><strong>Cisco Packet Tracer</strong><div>Network Simulation Tool</div></div>
+        <div class="card"><strong>Network Security</strong><div>Security Protocols & Analysis</div></div>
+        <div class="card"><strong>System Administration</strong><div>Server & Network Management</div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Tools & Other Skills</h2>
+      <div class="grid">
+        <div class="card"><strong>Zoho CRM</strong><div>CRM</div></div>
+        <div class="card"><strong>Notion</strong><div>Productivity</div></div>
+        <div class="card"><strong>JupyterLab</strong><div>Data Science</div></div>
+        <div class="card"><strong>Microsoft Office</strong><div>Productivity Suite</div></div>
+        <div class="card"><strong>Graphic Design</strong><div>Canva, Desygner, VistaCreate</div></div>
+        <div class="card"><strong>Agile & Scrum</strong><div>Project Management</div></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hire Me — Tafara Chitiyo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg-start:#9d4edd;--bg-end:#0b0b0d;--text:#f5f7fb;--muted:#c7c9d1;--glass:rgba(255,255,255,.08);--glass-border:rgba(255,255,255,.18);--nav-height:64px}
+    *,*:before,*:after{box-sizing:border-box}
+    body{margin:0;color:var(--text);background:linear-gradient(135deg,var(--bg-start),var(--bg-end));font-family:Inter,system-ui}
+    main{width:min(1000px,92%);margin:calc(var(--nav-height) + 24px) auto 48px}
+    .nav{position:fixed;inset:0 0 auto 0;height:var(--nav-height);display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.05));backdrop-filter:blur(10px) saturate(120%);-webkit-backdrop-filter:blur(10px) saturate(120%);border-bottom:1px solid var(--glass-border);z-index:100}
+    .nav-inner{width:min(1100px,92%);display:flex;align-items:center;justify-content:space-between}
+    .brand{font-family:"Plus Jakarta Sans",Inter,sans-serif;font-weight:800;letter-spacing:.06em;font-variant:small-caps;color:#fff;text-decoration:none}
+    .menu{display:flex;gap:1.2rem}
+    .menu a{font-family:"Plus Jakarta Sans",Inter,sans-serif;font-weight:600;color:var(--text);text-decoration:none;padding:.45rem .8rem;border-radius:10px;border:1px solid transparent}
+    .menu a:hover{background:rgba(255,255,255,.10);border-color:var(--glass-border)}
+    .menu a.active{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.28);color:#fff}
+
+    .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.06));border:1px solid var(--glass-border);border-radius:14px;padding:16px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 18px 48px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.35)}
+    h1,h2{font-family:"Plus Jakarta Sans"}
+    .muted{color:var(--muted)}
+    a.link{color:#fff;text-decoration:none;border-bottom:1px dashed rgba(255,255,255,.5)}
+  </style>
+</head>
+<body>
+  <nav class="nav" aria-label="Main Navigation">
+    <div class="nav-inner">
+      <a class="brand" href="/my-portfolio/app.html">Tafara Chitiyo</a>
+      <div class="menu">
+        <a href="/my-portfolio/app.html">Home</a>
+        <a href="/my-portfolio/professional.html">Professional</a>
+        <a href="/my-portfolio/skills.html">Skills</a>
+        <a href="/my-portfolio/projects.html">Projects</a>
+        <a class="active" href="/my-portfolio/hire.html">Hire Me</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <h1>Hire Me</h1>
+    <div class="grid">
+      <div class="card">
+        <h3>Email</h3>
+        <p class="muted">faffynaomi@gmail.com</p>
+        <p><a class="link" href="mailto:faffynaomi@gmail.com">Send Email</a></p>
+      </div>
+      <div class="card">
+        <h3>LinkedIn</h3>
+        <p class="muted">Tafara Chitiyo</p>
+        <p><a class="link" href="https://linkedin.com/in/tafara-chitiyo" target="_blank" rel="noopener">Connect</a></p>
+      </div>
+      <div class="card">
+        <h3>Phone</h3>
+        <p class="muted">+263 78 601 8957</p>
+        <p><a class="link" href="tel:+263786018957">Call</a></p>
+      </div>
+      <div class="card">
+        <h3>Location</h3>
+        <p class="muted">4 Alvord Road, Mt Pleasant<br/>Harare, Zimbabwe</p>
+      </div>
+    </div>
+
+    <h2 style="margin-top:28px">Education & Certifications</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>BSc (Hons) Computer Science</h3>
+        <p class="muted">University of Zimbabwe — 2023–2027</p>
+      </div>
+      <div class="card">
+        <h3>CS50's Introduction to AI with Python</h3>
+        <p class="muted">HarvardX — 2024</p>
+      </div>
+      <div class="card">
+        <h3>Scrum Fundamentals Certified</h3>
+        <p class="muted">SCRUMStudy — 2024</p>
+      </div>
+      <div class="card">
+        <h3>Advanced Level — 12 Points</h3>
+        <p class="muted">Monte Cassino Girls High School — 2022</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

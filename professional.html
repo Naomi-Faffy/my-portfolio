@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Professional — Tafara Chitiyo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --bg-start: #9d4edd; --bg-end: #0b0b0d; --text: #f5f7fb; --muted: #c7c9d1;
+      --glass: rgba(255,255,255,0.08); --glass-border: rgba(255,255,255,0.18);
+      --nav-height: 64px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin:0; color:var(--text); background: linear-gradient(135deg, var(--bg-start), var(--bg-end)); font-family: Inter, system-ui; }
+    main { width:min(1100px,92%); margin: calc(var(--nav-height) + 24px) auto 48px; }
+
+    /* Navbar */
+    .nav { position:fixed; inset:0 0 auto 0; height:var(--nav-height); display:flex; align-items:center; justify-content:center; backdrop-filter: blur(10px) saturate(120%); -webkit-backdrop-filter: blur(10px) saturate(120%); background: linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.05)); border-bottom:1px solid var(--glass-border); z-index:100; }
+    .nav-inner { width:min(1100px,92%); display:flex; align-items:center; justify-content:space-between; }
+    .brand { font-family: "Plus Jakarta Sans", Inter, sans-serif; font-weight:800; letter-spacing:.06em; font-variant: small-caps; color:#fff; text-decoration:none; }
+    .menu { display:flex; gap:1.2rem; }
+    .menu a { font-family:"Plus Jakarta Sans", Inter, sans-serif; font-weight:600; color:var(--text); text-decoration:none; padding:.45rem .8rem; border-radius:10px; border:1px solid transparent; }
+    .menu a:hover { background: rgba(255,255,255,0.10); border-color: var(--glass-border); }
+    .menu a.active { background: rgba(255,255,255,0.16); border-color: rgba(255,255,255,0.28); color:#fff; }
+
+    /* Sections */
+    .page-title { font-family:"Plus Jakarta Sans"; font-weight:800; letter-spacing:.02em; margin: 0 0 16px; }
+    .section { background: linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.06)); border:1px solid var(--glass-border); border-radius:18px; padding:24px; margin: 20px 0; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 18px 48px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.35); }
+    .timeline { display:grid; gap:16px; }
+    .item { background: rgba(255,255,255,0.06); border:1px solid var(--glass-border); border-radius:14px; padding:16px; }
+    .item h3 { font-family:"Plus Jakarta Sans"; margin:.2rem 0; }
+    .tech { display:flex; flex-wrap:wrap; gap:8px; margin:.4rem 0 .6rem; }
+    .tag { font-size:.85rem; padding:.2rem .6rem; border-radius:999px; background: rgba(255,255,255,0.10); border:1px solid var(--glass-border); }
+    .muted { color:var(--muted); }
+  </style>
+</head>
+<body>
+  <nav class="nav" aria-label="Main Navigation">
+    <div class="nav-inner">
+      <a class="brand" href="/my-portfolio/app.html">Tafara Chitiyo</a>
+      <div class="menu">
+        <a href="/my-portfolio/app.html">Home</a>
+        <a class="active" href="/my-portfolio/professional.html">Professional</a>
+        <a href="/my-portfolio/skills.html">Skills</a>
+        <a href="/my-portfolio/projects.html">Projects</a>
+        <a href="/my-portfolio/hire.html">Hire Me</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <h1 class="page-title">Work Experience & Education</h1>
+
+    <section class="section">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div class="item">
+          <h3>Administrator Assistant <span class="muted">— Messenger of Court, Marondera</span></h3>
+          <div class="tech">
+            <span class="tag">Microsoft Office Suite</span>
+            <span class="tag">Telephony Systems</span>
+          </div>
+          <ul>
+            <li>Managed and routed calls; ensured clients reached appropriate departments.</li>
+            <li>Handled confidential documents securely and responsibly.</li>
+            <li>Organized office resources to support court operations.</li>
+            <li>Distributed correspondence with high standards of accuracy and confidentiality.</li>
+          </ul>
+          <div class="muted">Dec 2022 – Aug 2023</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Education</h2>
+      <div class="timeline">
+        <div class="item">
+          <h3>BSc (Hons) Computer Science — University of Zimbabwe</h3>
+          <div class="tech">
+            <span class="tag">Networking</span>
+            <span class="tag">Cybersecurity</span>
+            <span class="tag">Programming</span>
+            <span class="tag">System Administration</span>
+          </div>
+          <ul>
+            <li>Developing expertise in networking, cybersecurity, and systems administration.</li>
+            <li>Strong academic performance with practical programming experience.</li>
+            <li>Labs and simulations using Cisco Packet Tracer.</li>
+          </ul>
+          <div class="muted">2023 – 2027</div>
+        </div>
+        <div class="item">
+          <h3>Advanced Level — Monte Cassino Girls High School</h3>
+          <ul>
+            <li>12 Points in A-Level examinations with distinction in STEM subjects.</li>
+          </ul>
+          <div class="muted">2022</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Certifications</h2>
+      <div class="timeline">
+        <div class="item">
+          <h3>CS50's Introduction to AI with Python — HarvardX</h3>
+          <div class="tech">
+            <span class="tag">Python</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">AI Algorithms</span>
+            <span class="tag">Jupyter Notebook</span>
+          </div>
+          <ul>
+            <li>Fundamental AI concepts: search, logic, machine learning.</li>
+            <li>Hands-on projects implementing AI techniques.</li>
+          </ul>
+          <div class="muted">2024</div>
+        </div>
+        <div class="item">
+          <h3>Scrum Fundamentals Certified — SCRUMStudy</h3>
+          <div class="muted">2024</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
