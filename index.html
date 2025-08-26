@@ -156,6 +156,72 @@
     @media (max-width: 480px) {
       .content { padding: 7%; }
     }
+
+    /* --- MOBILE RESPONSIVENESS --- */
+    @media (max-width: 768px) {
+      /* Allow card to grow vertically based on content */
+      .card {
+        aspect-ratio: auto;
+        height: auto;
+        padding-bottom: 4rem; /* Ensure space for CTA button */
+      }
+
+      /* Hide decorative barcode on mobile */
+      .barcode {
+        display: none;
+      }
+
+      /* Reset absolute positioning for a stacked layout */
+      .content, .name, .subtitle, .rows, .cta {
+        position: static;
+        top: auto; left: auto; right: auto; bottom: auto;
+        text-align: center; /* Center all text */
+      }
+
+      /* Center the content container */
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 4rem;
+      }
+      
+      /* Adjust name and subtitle spacing */
+      .name {
+        margin-bottom: 1rem;
+      }
+      .subtitle {
+        margin-bottom: 3rem;
+      }
+
+      /* Center-align the icon rows */
+      .rows {
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center rows content */
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+      }
+      .row {
+        grid-template-columns: auto; /* Stack icon and text */
+        justify-items: center;
+        gap: 0.5rem;
+      }
+      .text {
+        font-size: 1rem;
+      }
+
+      /* Reposition CTA button at the bottom */
+      .cta {
+        position: absolute;
+        bottom: 1.5rem; /* Place it at the very bottom */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+      }
+    }
   </style>
 </head>
 <body>
