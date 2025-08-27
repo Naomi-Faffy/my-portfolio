@@ -56,14 +56,16 @@
   -webkit-backdrop-filter: blur(18px) saturate(140%);
   border-bottom: 1px solid rgba(255,255,255,0.18);
 }
-.thread-theory .brand { display:flex; gap:10px; align-items:center; color:var(--mono-white); text-decoration:none; font-weight:800; letter-spacing:.05em; text-shadow: var(--text-shadow); }
+/* Make both nav items pill-styled for parity */
+.thread-theory .brand { display:flex; gap:10px; align-items:center; color:var(--mono-white); text-decoration:none; font-weight:800; letter-spacing:.05em; text-shadow: var(--text-shadow); border: 1px solid var(--border); border-radius: 999px; padding: 10px 14px; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); filter: drop-shadow(0 0 10px var(--line-glow)); }
 .thread-theory .dot { width:12px; height:12px; border-radius:50%; background: var(--mono-white); filter: drop-shadow(0 0 10px var(--line-glow)); }
-/* Style .bar to match previous look (pill with same emphasis) */
+/* Style .bar to match pill emphasis */
 .thread-theory .bar { color: rgba(255,255,255,0.92); border: 1px solid var(--border); border-radius:999px; padding:10px 14px; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); filter: drop-shadow(0 0 10px var(--line-glow)); }
 
 /* Center layout; wider glass card */
 .thread-theory main { width: min(var(--container-max), 100%); margin: 0 auto; padding: var(--container-pad); }
-.thread-theory .hero { min-height: calc(100vh - 86px); display:grid; grid-template-columns: repeat(12, 1fr); gap: 24px; align-items: center; justify-items: center; }
+/* Lock to one viewport and center vertically so no scroll is needed */
+.thread-theory .hero { min-height: calc(100vh - 86px); display:grid; grid-template-columns: repeat(12, 1fr); gap: 24px; align-items: center; justify-items: center; overflow: hidden; }
 
 /* Content box: centered, ~75% width up to 1100px, darker background */
 .thread-theory .glass-card {
