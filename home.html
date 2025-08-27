@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex">
   <!-- Immediate redirect to the new Home page -->
-  <meta http-equiv="refresh" content="0; url=/my-portfolio/app.html">
-  <link rel="canonical" href="/my-portfolio/app.html">
+  <meta http-equiv="refresh" content="0; url=app.html">
+  <link rel="canonical" href="app.html">
   <script>
     // JS redirect as a fallback if meta refresh is blocked
     (function(){
-      var target = '/my-portfolio/app.html';
-      if (location.pathname !== target) {
-        location.replace(target);
+      var target = 'app.html';
+      if (location.pathname.slice(-target.length) !== target) {
+        window.location.href = target;
       }
     })();
   </script>
@@ -27,7 +27,7 @@
 <body>
   <div class="card">
     Redirecting to the new Home… If you are not redirected, 
-    <a href="/my-portfolio/app.html">click here</a>.
+    <a href="app.html">click here</a>.
   </div>
 </body>
 </html>
