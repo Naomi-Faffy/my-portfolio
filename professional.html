@@ -36,6 +36,15 @@
     .tech { display:flex; flex-wrap:wrap; gap:8px; margin:.4rem 0 .6rem; }
     .tag { font-size:.85rem; padding:.2rem .6rem; border-radius:999px; background: rgba(255,255,255,0.10); border:1px solid var(--glass-border); }
     .muted { color:var(--muted); }
+    /* Mobile tweaks */
+    @media (max-width: 600px) {
+      .nav-inner { width: 94%; }
+      .menu { gap: .5rem; flex-wrap: wrap; justify-content: flex-end; }
+      .menu a { padding: .4rem .6rem; font-size: .9rem; }
+      .brand { font-size: 1rem; }
+      main { width: 94%; margin: calc(var(--nav-height) + 16px) auto 32px; }
+      .section { padding: 16px; }
+    }
   </style>
 </head>
 <body>

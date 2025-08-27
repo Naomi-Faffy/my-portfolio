@@ -103,8 +103,8 @@
 .thread-theory a { color: rgba(255,255,255,0.9); text-decoration: none; border-bottom: 1px solid transparent; }
 .thread-theory a:hover { color: #fff; text-decoration: underline; text-underline-offset: 3px; filter: drop-shadow(0 0 8px var(--line-glow)); }
 
-/* Footer (no Back to Profiles link) */
-.thread-theory footer { width: min(var(--container-max), 100%); margin: 8px auto 28px; padding: 0 var(--container-pad); color: rgba(255,255,255,0.92); text-shadow: var(--text-shadow); display:flex; justify-content:space-between; align-items:center; gap: 12px; flex-wrap: wrap; }
+/* Footer hidden to avoid scroll */
+.thread-theory footer { display: none; }
 
 /* Animations */
 @keyframes tt-fadeIn { to { opacity: 1; transform: translateY(0); } }

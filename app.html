@@ -56,7 +56,14 @@
     .cursor { display:inline-block; width:1ch; color:#ffffff; animation: blink 1s steps(1) infinite; }
     @keyframes blink { 50% { opacity: 0; } }
 
-    @media (max-width: 480px) { .menu { gap: .6rem; } }
+    /* Mobile tweaks */
+    @media (max-width: 600px) {
+      .nav-inner { width: 94%; }
+      .menu { gap: .5rem; flex-wrap: wrap; justify-content: flex-end; }
+      .menu a { padding: .4rem .6rem; font-size: .9rem; }
+      .brand { font-size: 1rem; }
+      .line-middle { white-space: normal; font-size: clamp(1.4rem, 9vw, 2.2rem); }
+    }
   </style>
 </head>
 <body>
