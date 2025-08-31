@@ -83,6 +83,106 @@
     }
   </style>
 <link rel="stylesheet" href="thread-theory-glass.css">
+<style>
+  /* THREAD THEORY page-only overrides */
+  body.thread-theory { overflow: auto; }
+
+  /* Topbar glass + unified uppercase nav items */
+  .thread-theory .topbar {
+    height: 86px;
+    padding: 0 24px;
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    border-bottom: 1px solid rgba(255,255,255,0.18);
+  }
+  .thread-theory .topbar .bar,
+  .thread-theory .topbar .brand {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 10px 14px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  .thread-theory .topbar .brand span { text-transform: inherit; }
+
+  /* Centering container */
+  .thread-theory main { width: 100%; margin: 0; padding: 0; }
+  .thread-theory .hero {
+    margin: 0;
+    min-height: calc(100vh - 86px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25rem;
+  }
+  .thread-theory .panel { display: none !important; }
+
+  /* Glass-like content card */
+  .thread-theory .glass-card {
+    width: min(1000px, 70%);
+    background: rgba(255,255,255,0.65);
+    color: #000;
+    border: 1px solid rgba(255,255,255,0.28);
+    border-radius: 40px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35), 0 0 14px rgba(255,255,255,0.18);
+    backdrop-filter: blur(14px) saturate(135%);
+    -webkit-backdrop-filter: blur(14px) saturate(135%);
+    overflow: visible;
+    transform: translateY(-3vh);
+  }
+  .thread-theory .glass-inner { padding: 2.25rem; }
+  .thread-theory .glass-card .title,
+  .thread-theory .glass-card .sub,
+  .thread-theory .glass-card p { color: #000 !important; }
+  .thread-theory .glass-card a { color: #000; }
+
+  /* Buttons: center, uppercase, consistent, not clipped */
+  .thread-theory .cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+  }
+  .thread-theory .btn-primary,
+  .thread-theory .btn-ghost {
+    text-transform: uppercase;
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    font-weight: 800;
+    letter-spacing: .08em;
+    border-radius: 9999px;
+    padding: 12px 20px;
+    border: 1px solid rgba(0,0,0,0.85);
+    background: rgba(255,255,255,0.9);
+    color: #000;
+  }
+  .thread-theory .btn-primary:hover,
+  .thread-theory .btn-ghost:hover { filter: brightness(1.02); transform: scale(1.03); transition: transform 160ms ease; }
+
+  /* Footer: no redundant back link */
+  .thread-theory footer .back { display: none !important; }
+
+  /* Responsiveness */
+  @media (max-width: 1199px) {
+    .thread-theory .glass-card { width: 85%; transform: translateY(-2vh); }
+    .thread-theory .glass-inner { padding: 2rem; }
+  }
+  @media (max-width: 767px) {
+    .thread-theory .hero { min-height: calc(100vh - 86px); padding: 1rem; }
+    .thread-theory .glass-card { width: 95%; margin: 0 1rem; transform: translateY(0); }
+    .thread-theory .glass-inner { padding: 1.25rem; }
+    .thread-theory .cta-row { flex-direction: column; }
+  }
+</style>
 </head>
 <body class="thread-theory">
   <!-- Background video: set the source on the <source> element below -->
