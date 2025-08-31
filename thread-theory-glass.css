@@ -49,88 +49,97 @@
 /* Taller, stronger glass nav bar */
 .thread-theory .topbar {
   display:flex; align-items:center; justify-content:space-between;
-  height: 86px;
+  height: 86px; /* 80–90px range */
   padding: 0 var(--container-pad);
   background: rgba(0,0,0,0.35);
   backdrop-filter: blur(18px) saturate(140%);
   -webkit-backdrop-filter: blur(18px) saturate(140%);
   border-bottom: 1px solid rgba(255,255,255,0.18);
 }
-.thread-theory .brand {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    color: var(--mono-black);
-    text-decoration: none;
-    font-weight: 800;
-    letter-spacing: .05em;
-    text-shadow: var(--text-shadow);
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    padding: 10px 14px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    filter: drop-shadow(0 0 10px var(--line-glow));
-    font-size: 1rem; /* Adjust font size as needed */
-}
-
-.thread-theory .bar {
-    color: var(--mono-black);
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    padding: 10px 14px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    filter: drop-shadow(0 0 10px var(--line-glow));
-    font-size: 1rem; /* Adjust font size as needed */
-    font-weight: 800;
-    letter-spacing: .05em;
+/* Make BOTH items (THREAD THEORY and BACK TO PROFILES) look identical and ALL CAPS */
+.thread-theory .topbar .bar,
+.thread-theory .topbar .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--mono-black);
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 12px 16px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  filter: drop-shadow(0 0 10px var(--line-glow));
+  line-height: 1;
 }
 
 /* Center layout; wider glass card */
 .thread-theory main { width: min(var(--container-max), 100%); margin: 0 auto; padding: var(--container-pad); }
-/* Lock to one viewport and center vertically so no scroll is needed */
-.thread-theory .hero { min-height: calc(100vh - 86px); display:grid; grid-template-columns: repeat(12, 1fr); gap: 24px; align-items: center; justify-items: center; overflow: hidden; }
+/* Center vertically and horizontally within the viewport */
+.thread-theory .hero { min-height: calc(100vh - 86px); display:grid; place-items: center; grid-template-columns: 1fr; overflow: hidden; }
 
-/* Content box: centered, ~75% width up to 1100px, darker background */
+/* Content box: centered white card, ~70–75% width up to 1000px */
 .thread-theory .glass-card {
-  grid-column: 2 / 12; /* approx 75% area on wide screens */
+  grid-column: 1 / -1;
   justify-self: center;
-  width: min(1100px, 75%);
-  border-radius: 40px; /* stronger rounded rectangle */
-  background: rgba(0,0,0,0.65); /* darker glass */
-  border: 1px solid rgba(255,255,255,0.25);
-  /* soft white glow + depth */
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4), 0 0 14px rgba(255,255,255,0.12);
+  width: min(1000px, 75%);
+  border-radius: 40px; /* rounded rectangle */
+  background: #ffffff; /* white card */
+  color: #000; /* black text */
+  border: 1px solid rgba(0,0,0,0.12);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
   backdrop-filter: blur(14px) saturate(120%);
   -webkit-backdrop-filter: blur(14px) saturate(120%);
-  transform: translateY(20px);
+  transform: translateY(8px);
   opacity: 0;
-  animation: tt-fadeIn 600ms ease-out forwards;
+  animation: tt-fadeIn 550ms ease-out forwards;
 }
-.thread-theory .glass-inner { padding: clamp(24px, 4vw, 40px); }
+.thread-theory .glass-inner { padding: 3rem; }
 
 /* Hide hero panel image entirely */
 .thread-theory .panel { display:none; }
 
-/* Typography */
-.thread-theory .title { font-family: "Playfair Display", serif; font-weight: 700; font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.06; margin: 0 0 12px; color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,0.5); }
-.thread-theory .title .accent { color: #fff; filter: drop-shadow(0 0 10px rgba(255,255,255,0.35)); }
-.thread-theory .sub { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial; font-weight: 400; color: rgba(255,255,255,0.92); line-height: 1.7; text-shadow: 0 1px 2px rgba(0,0,0,0.5); }
+/* Typography (black text on white card) */
+.thread-theory .title { font-family: "Playfair Display", serif; font-weight: 700; font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.06; margin: 0 0 12px; color: #000; text-shadow: none; }
+.thread-theory .title .accent { color: #000; filter: none; }
+.thread-theory .sub { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial; font-weight: 400; color: #111; line-height: 1.7; text-shadow: none; }
 
-/* CTA buttons: centered and stacked neatly like home page */
+/* CTA buttons: centered, same style, ALL CAPS */
 .thread-theory .cta-row { display:flex; gap:14px; margin-top: 18px; flex-wrap: wrap; justify-content: center; }
-.thread-theory .btn-primary { background: rgba(255,255,255,0.92); color: #000; border: 1px solid rgba(255,255,255,0.25); border-radius: 9999px; padding: 12px 22px; font-weight:700; cursor:pointer; transition: transform 160ms ease, filter 160ms ease, background 160ms ease; filter: drop-shadow(0 0 8px rgba(255,255,255,0.2)); }
-.thread-theory .btn-primary:hover, .thread-theory .btn-primary:focus { background: rgba(255,255,255,0.98); transform: scale(1.03); filter: drop-shadow(0 0 14px rgba(255,255,255,0.6)); outline: 2px solid rgba(255,255,255,0.85); outline-offset: 2px; }
-.thread-theory .btn-ghost { display:inline-block; color: rgba(255,255,255,0.95); text-decoration:none; border-radius: 9999px; padding: 12px 22px; border: 1px solid rgba(255,255,255,0.85); background: transparent; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); transition: transform 160ms ease, filter 160ms ease, border-color 160ms ease; filter: drop-shadow(0 0 10px rgba(255,255,255,0.25)); }
-.thread-theory .btn-ghost:hover, .thread-theory .btn-ghost:focus { transform: scale(1.03); border-color: rgba(255,255,255,1); filter: drop-shadow(0 0 16px rgba(255,255,255,0.7)); outline: 2px solid rgba(255,255,255,0.85); outline-offset: 2px; }
+.thread-theory .btn-primary,
+.thread-theory .btn-ghost {
+  display:inline-block;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: .06em;
+  border-radius: 9999px;
+  padding: 12px 24px;
+  border: 1px solid rgba(0,0,0,0.9);
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  transition: transform 160ms ease, filter 160ms ease, background 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+.thread-theory .btn-primary:hover,
+.thread-theory .btn-primary:focus,
+.thread-theory .btn-ghost:hover,
+.thread-theory .btn-ghost:focus {
+  transform: scale(1.03);
+  filter: drop-shadow(0 0 12px rgba(0,0,0,0.25));
+}
+/* Keep back link as a button look */
+.thread-theory .btn-ghost { text-decoration: none; }
 
-/* Links inside glass card default to white for contrast */
-.thread-theory .glass-card a { color: rgba(255,255,255,0.95); }
-.thread-theory .glass-card a:hover { color: #fff; text-decoration: underline; text-underline-offset: 3px; filter: drop-shadow(0 0 8px rgba(255,255,255,0.6)); }
+/* Links inside the white card: dark for readability */
+.thread-theory .glass-card a { color: #0b0b0e; text-decoration: none; border-bottom: 1px solid transparent; }
+.thread-theory .glass-card a:hover { color: #000; text-decoration: underline; text-underline-offset: 3px; }
 
-/* Footer hidden to avoid scroll */
-.thread-theory footer { display: none; }
+/* Minimal footer, no repeated back link */
+.thread-theory footer { display:block; width:min(1100px, 92%); margin: 12px auto 24px; color: rgba(255,255,255,0.85); font-size: .95rem; text-align: center; }
 
 /* Animations */
 @keyframes tt-fadeIn { to { opacity: 1; transform: translateY(0); } }
