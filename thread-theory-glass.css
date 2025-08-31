@@ -38,8 +38,8 @@
   content: "";
   position: fixed; inset: 0; z-index: -1;
   background:
-    radial-gradient(120% 120% at 50% 50%, rgba(255,255,255,0.0) 55%, rgba(255,255,255,0.55) 100%),
-    rgba(255,255,255,0.55);
+    radial-gradient(120% 120% at 50% 50%, rgba(0,0,0,0.0) 55%, rgba(0,0,0,0.65) 100%),
+    rgba(0,0,0,0.55);
   pointer-events: none;
 }
 
@@ -98,9 +98,10 @@
   justify-self: center;
   width: min(1100px, 75%);
   border-radius: 40px; /* stronger rounded rectangle */
-  background: rgba(255,255,255,0.65); /* white-driven */
-  border: 1px solid rgba(0,0,0,0.25);
-  box-shadow: 0 0 20px rgba(0,0,0,0.35), 0 10px 30px rgba(255,255,255,0.35);
+  background: rgba(0,0,0,0.65); /* darker glass */
+  border: 1px solid rgba(255,255,255,0.25);
+  /* soft white glow + depth */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4), 0 0 14px rgba(255,255,255,0.12);
   backdrop-filter: blur(14px) saturate(120%);
   -webkit-backdrop-filter: blur(14px) saturate(120%);
   transform: translateY(20px);
@@ -113,20 +114,20 @@
 .thread-theory .panel { display:none; }
 
 /* Typography */
-.thread-theory .title { font-family: "Playfair Display", serif; font-weight: 700; font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.06; margin: 0 0 12px; color: var(--mono-black); text-shadow: var(--text-shadow); }
-.thread-theory .title .accent { color: var(--mono-black); filter: drop-shadow(0 0 12px var(--line-glow)); }
-.thread-theory .sub { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial; font-weight: 400; color: rgba(0,0,0,0.95); line-height: 1.7; text-shadow: var(--text-shadow); }
+.thread-theory .title { font-family: "Playfair Display", serif; font-weight: 700; font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.06; margin: 0 0 12px; color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,0.5); }
+.thread-theory .title .accent { color: #fff; filter: drop-shadow(0 0 10px rgba(255,255,255,0.35)); }
+.thread-theory .sub { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial; font-weight: 400; color: rgba(255,255,255,0.92); line-height: 1.7; text-shadow: 0 1px 2px rgba(0,0,0,0.5); }
 
 /* CTA buttons: centered and stacked neatly like home page */
 .thread-theory .cta-row { display:flex; gap:14px; margin-top: 18px; flex-wrap: wrap; justify-content: center; }
-.thread-theory .btn-primary { background: var(--mono-white); color: var(--mono-black); border: 1px solid rgba(0,0,0,0.18); border-radius: 9999px; padding: 12px 22px; font-weight:700; cursor:pointer; transition: transform 160ms ease, filter 160ms ease, background 160ms ease; filter: drop-shadow(0 0 8px rgba(0,0,0,0.2)); }
-.thread-theory .btn-primary:hover, .thread-theory .btn-primary:focus { background: rgba(255,255,255,0.85); transform: scale(1.03); filter: drop-shadow(0 0 14px var(--line-glow)); outline: 2px solid rgba(0,0,0,0.9); outline-offset: 2px; }
-.thread-theory .btn-ghost { display:inline-block; color: rgba(0,0,0,0.9); text-decoration:none; border-radius: 9999px; padding: 12px 22px; border: 1px solid rgba(0,0,0,0.9); background: transparent; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); transition: transform 160ms ease, filter 160ms ease, border-color 160ms ease; filter: drop-shadow(0 0 12px var(--line-glow)); }
-.thread-theory .btn-ghost:hover, .thread-theory .btn-ghost:focus { transform: scale(1.03); border-color: #000; filter: drop-shadow(0 0 16px var(--line-glow)); outline: 2px solid rgba(0,0,0,0.9); outline-offset: 2px; }
+.thread-theory .btn-primary { background: rgba(255,255,255,0.92); color: #000; border: 1px solid rgba(255,255,255,0.25); border-radius: 9999px; padding: 12px 22px; font-weight:700; cursor:pointer; transition: transform 160ms ease, filter 160ms ease, background 160ms ease; filter: drop-shadow(0 0 8px rgba(255,255,255,0.2)); }
+.thread-theory .btn-primary:hover, .thread-theory .btn-primary:focus { background: rgba(255,255,255,0.98); transform: scale(1.03); filter: drop-shadow(0 0 14px rgba(255,255,255,0.6)); outline: 2px solid rgba(255,255,255,0.85); outline-offset: 2px; }
+.thread-theory .btn-ghost { display:inline-block; color: rgba(255,255,255,0.95); text-decoration:none; border-radius: 9999px; padding: 12px 22px; border: 1px solid rgba(255,255,255,0.85); background: transparent; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); transition: transform 160ms ease, filter 160ms ease, border-color 160ms ease; filter: drop-shadow(0 0 10px rgba(255,255,255,0.25)); }
+.thread-theory .btn-ghost:hover, .thread-theory .btn-ghost:focus { transform: scale(1.03); border-color: rgba(255,255,255,1); filter: drop-shadow(0 0 16px rgba(255,255,255,0.7)); outline: 2px solid rgba(255,255,255,0.85); outline-offset: 2px; }
 
-/* Links */
-.thread-theory a { color: rgba(0,0,0,0.9); text-decoration: none; border-bottom: 1px solid transparent; }
-.thread-theory a:hover { color: #000; text-decoration: underline; text-underline-offset: 3px; filter: drop-shadow(0 0 8px var(--line-glow)); }
+/* Links inside glass card default to white for contrast */
+.thread-theory .glass-card a { color: rgba(255,255,255,0.95); }
+.thread-theory .glass-card a:hover { color: #fff; text-decoration: underline; text-underline-offset: 3px; filter: drop-shadow(0 0 8px rgba(255,255,255,0.6)); }
 
 /* Footer hidden to avoid scroll */
 .thread-theory footer { display: none; }
