@@ -79,14 +79,18 @@
 
 /* Center layout; wider glass card */
 .thread-theory main { width: min(var(--container-max), 100%); margin: 0 auto; padding: var(--container-pad); }
-/* Center vertically and horizontally within the viewport */
-.thread-theory .hero { min-height: calc(100vh - 86px); display:grid; place-items: center; grid-template-columns: 1fr; overflow: hidden; }
+/* Center vertically and horizontally using flexbox (viewport minus navbar) */
+.thread-theory .hero {
+  min-height: calc(100vh - 86px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--container-pad);
+}
 
-/* Content box: centered white card, ~70–75% width up to 1000px */
+/* Content box: centered white card, responsive widths */
 .thread-theory .glass-card {
-  grid-column: 1 / -1;
-  justify-self: center;
-  width: min(1000px, 75%);
+  width: min(1000px, 70%);
   border-radius: 40px; /* rounded rectangle */
   background: #ffffff; /* white card */
   color: #000; /* black text */
@@ -97,6 +101,7 @@
   transform: translateY(8px);
   opacity: 0;
   animation: tt-fadeIn 550ms ease-out forwards;
+  overflow-wrap: anywhere; /* ensure text wraps cleanly */
 }
 .thread-theory .glass-inner { padding: 3rem; }
 
@@ -169,16 +174,18 @@
 
 /* Responsive */
 @media (max-width: 1199px) {
-  .thread-theory .hero { grid-template-columns: repeat(12, 1fr); }
-  .thread-theory .glass-card { grid-column: 3 / 11; }
-  .thread-theory .panel { grid-column: 1 / -1; order: -1; margin-bottom: 16px; }
+  /* Tablet: ~85% width, centered with padding */
+  .thread-theory .glass-card { width: 85%; }
+  .thread-theory .glass-inner { padding: 2.25rem; }
 }
 
 @media (max-width: 767px) {
-  .thread-theory { --glass-blur: 12px; }
-  .thread-theory .hero { grid-template-columns: 1fr; min-height: calc(100vh - 80px); }
-  .thread-theory .glass-card, .thread-theory .panel { grid-column: 1 / -1; }
-  .thread-theory .glass-inner { padding: 16px; }
+  /* Mobile: ~95% width with margin and tighter padding */
+  .thread-theory .hero { min-height: calc(100vh - 86px); padding: 1rem; }
+  .thread-theory .glass-card { width: 95%; margin: 1rem; }
+  .thread-theory .glass-inner { padding: 1.25rem; }
+  /* Buttons stack neatly and center */
+  .thread-theory .cta-row { flex-direction: column; align-items: center; }
 }
 
 /* Reduced motion */
