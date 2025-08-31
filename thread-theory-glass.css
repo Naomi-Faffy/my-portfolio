@@ -78,7 +78,7 @@
 }
 
 /* Center layout; wider glass card */
-.thread-theory main { width: min(var(--container-max), 100%); margin: 0 auto; padding: var(--container-pad); }
+.thread-theory main { width: min(var(--container-max), 100%); margin: 0 auto; padding: 0 var(--container-pad); }
 /* Center vertically and horizontally using flexbox (viewport minus navbar) */
 .thread-theory .hero {
   min-height: calc(100vh - 86px);
@@ -96,9 +96,7 @@
   color: #000; /* black text */
   border: 1px solid rgba(0,0,0,0.12);
   box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-  backdrop-filter: blur(14px) saturate(120%);
-  -webkit-backdrop-filter: blur(14px) saturate(120%);
-  transform: translateY(8px);
+  transform: translateY(0); /* no offset */
   opacity: 0;
   animation: tt-fadeIn 550ms ease-out forwards;
   overflow-wrap: anywhere; /* ensure text wraps cleanly */
@@ -113,14 +111,15 @@
 .thread-theory .title .accent { color: #000; filter: none; }
 .thread-theory .sub { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial; font-weight: 400; color: #111; line-height: 1.7; text-shadow: none; }
 
-/* CTA buttons: centered, same style, ALL CAPS */
+/* CTA buttons: centered, same style, ALL CAPS, same font as nav */
 .thread-theory .cta-row { display:flex; gap:14px; margin-top: 18px; flex-wrap: wrap; justify-content: center; }
 .thread-theory .btn-primary,
 .thread-theory .btn-ghost {
   display:inline-block;
   text-transform: uppercase;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial; /* match navbar font family */
   font-weight: 800;
-  letter-spacing: .06em;
+  letter-spacing: .08em; /* match navbar letter spacing */
   border-radius: 9999px;
   padding: 12px 24px;
   border: 1px solid rgba(0,0,0,0.9);
@@ -143,8 +142,9 @@
 .thread-theory .glass-card a { color: #0b0b0e; text-decoration: none; border-bottom: 1px solid transparent; }
 .thread-theory .glass-card a:hover { color: #000; text-decoration: underline; text-underline-offset: 3px; }
 
-/* Minimal footer, no repeated back link */
+/* Minimal footer; ensure no redundant back link shown */
 .thread-theory footer { display:block; width:min(1100px, 92%); margin: 12px auto 24px; color: rgba(255,255,255,0.85); font-size: .95rem; text-align: center; }
+.thread-theory footer .back { display: none !important; }
 
 /* Animations */
 @keyframes tt-fadeIn { to { opacity: 1; transform: translateY(0); } }
