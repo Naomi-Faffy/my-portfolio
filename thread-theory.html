@@ -85,7 +85,7 @@
 <link rel="stylesheet" href="thread-theory-glass.css">
 <style>
   /* THREAD THEORY page-only overrides */
-  body.thread-theory { overflow: auto; }
+  body.thread-theory { overflow: hidden; --tt-footer-h: 54px; }
 
   /* Topbar glass + unified uppercase nav items */
   .thread-theory .topbar {
@@ -124,6 +124,9 @@
     align-items: center;
     padding: 1.25rem;
   }
+  /* Align center to footer reference text area visually */
+  .thread-theory footer { height: 54px; display:flex; align-items:center; justify-content:center; margin: 0; }
+  .thread-theory footer .back { display:none !important; }
   .thread-theory .panel { display: none !important; }
 
   /* Glass-like content card */
@@ -139,7 +142,7 @@
     overflow: visible;
     transform: translateY(-3vh);
   }
-  .thread-theory .glass-inner { padding: 2.25rem; }
+  .thread-theory .glass-inner { padding: 2.25rem; max-height: calc(100vh - 86px - var(--tt-footer-h) - 2.5rem); overflow:auto; }
   .thread-theory .glass-card .title,
   .thread-theory .glass-card .sub,
   .thread-theory .glass-card p { color: #000 !important; }
@@ -213,7 +216,6 @@
             </p>
             <div class="cta-row">
               <button class="btn-primary" onclick="window.open('https://thread-theory-zeta.vercel.app/', '_blank')">Visit site</button>
-              <a class="btn-ghost" href="netflix.html">Back</a>
             </div>
           </div>
         </div>
