@@ -115,18 +115,17 @@
   .thread-theory .topbar .brand span { text-transform: inherit; }
 
   /* Centering container */
-  .thread-theory .shell { min-height: 100dvh; display: grid; grid-template-rows: 86px 1fr var(--tt-footer-h); }
-  .thread-theory main { width: 100%; margin: 0; padding: 0; height: calc(100dvh - 86px - var(--tt-footer-h)); min-height: calc(100dvh - 86px - var(--tt-footer-h)); display: grid; place-items: center; }
+  .thread-theory .shell { min-height: 100dvh; display: grid; grid-template-rows: auto 1fr auto; }
+  .thread-theory main { width: 100%; margin: 0; padding: 0; }
   .thread-theory .hero {
     margin: 0;
     padding: 0;
-    min-height: auto; /* override external min-height */
-    height: auto;
-    display: grid;
-    place-items: center;
+    min-height: calc(100dvh - 86px - var(--tt-footer-h));
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
   }
-  .thread-theory .glass-card { justify-self: center; align-self: center; }
   /* Align center to footer reference text area visually */
   .thread-theory footer { height: 54px; display:flex; align-items:center; justify-content:center; margin: 0; }
   .thread-theory footer .back { display:none !important; }
